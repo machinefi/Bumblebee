@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/iotexproject/Bumblebee/kit/enumgen"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 	. "github.com/onsi/gomega"
-	"github.com/saitofun/qkit/kit/enumgen"
-	"github.com/saitofun/qkit/x/pkgx"
 )
 
 func TestScanner(t *testing.T) {

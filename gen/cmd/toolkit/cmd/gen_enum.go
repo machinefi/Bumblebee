@@ -3,8 +3,8 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/saitofun/qkit/kit/enumgen"
-	"github.com/saitofun/qkit/x/pkgx"
+	"github.com/iotexproject/Bumblebee/kit/enumgen"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 )
 
 func init() {

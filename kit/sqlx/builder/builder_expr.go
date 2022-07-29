@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/saitofun/qkit/x/reflectx"
+	"github.com/iotexproject/Bumblebee/x/reflectx"
 )
 
 type SqlExpr interface {

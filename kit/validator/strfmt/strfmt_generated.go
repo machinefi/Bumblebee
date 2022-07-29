@@ -6,7 +6,7 @@
 package strfmt
 
 import (
-	"github.com/saitofun/qkit/kit/validator"
+	"github.com/iotexproject/Bumblebee/kit/validator"
 )
 
 func init() {

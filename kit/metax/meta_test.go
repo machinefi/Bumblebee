@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
+	. "github.com/iotexproject/Bumblebee/kit/metax"
 	. "github.com/onsi/gomega"
-	. "github.com/saitofun/qkit/kit/metax"
 )
 
 func TestParseMeta(t *testing.T) {
@@ -45,7 +45,7 @@ func TestMeta(t *testing.T) {
 
 type Some struct{ Ctx }
 
-func (s *Some) WithContext(ctx context.Context) *Some{
+func (s *Some) WithContext(ctx context.Context) *Some {
 	return &Some{Ctx: s.Ctx.WithContext(ctx)}
 }
 

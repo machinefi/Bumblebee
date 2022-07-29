@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"reflect"
 
-	"github.com/saitofun/qkit/base/types"
-	"github.com/saitofun/qkit/x/reflectx"
+	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/iotexproject/Bumblebee/x/reflectx"
 )
 
 func NewOperatorFactory(op Operator, last bool) *OperatorFactory {

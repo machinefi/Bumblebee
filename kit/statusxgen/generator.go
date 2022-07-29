@@ -10,9 +10,9 @@ import (
 	"github.com/saitofun/qlib/util/qnaming"
 	"golang.org/x/tools/go/packages"
 
-	gen "github.com/saitofun/qkit/gen/codegen"
-	"github.com/saitofun/qkit/kit/statusx"
-	"github.com/saitofun/qkit/x/pkgx"
+	gen "github.com/iotexproject/Bumblebee/gen/codegen"
+	"github.com/iotexproject/Bumblebee/kit/statusx"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 )
 
 func New(pkg *pkgx.Pkg) *Generator {

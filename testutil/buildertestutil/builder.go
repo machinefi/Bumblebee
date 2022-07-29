@@ -9,7 +9,7 @@ import (
 	"github.com/onsi/gomega"
 	"github.com/onsi/gomega/types"
 
-	"github.com/saitofun/qkit/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 )
 
 func BeExpr(q string, args ...interface{}) types.GomegaMatcher {

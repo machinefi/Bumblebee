@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/saitofun/qkit/base/types"
-	"github.com/saitofun/qkit/kit/sqlx"
-	"github.com/saitofun/qkit/kit/sqlx/driver/postgres"
-	"github.com/saitofun/qkit/x/misc/must"
-	"github.com/saitofun/qkit/x/misc/retry"
+	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/iotexproject/Bumblebee/kit/sqlx"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/driver/postgres"
+	"github.com/iotexproject/Bumblebee/x/misc/must"
+	"github.com/iotexproject/Bumblebee/x/misc/retry"
 )
 
 type Endpoint struct {

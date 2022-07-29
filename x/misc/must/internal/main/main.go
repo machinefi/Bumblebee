@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	. "github.com/saitofun/qkit/gen/codegen"
+	. "github.com/iotexproject/Bumblebee/gen/codegen"
 	"github.com/saitofun/qlib/util/qnaming"
 )
 

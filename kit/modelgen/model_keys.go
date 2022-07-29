@@ -1,6 +1,6 @@
 package modelgen
 
-import "github.com/saitofun/qkit/kit/sqlx/builder"
+import "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 
 type Keys struct {
 	Primary       []string
@@ -53,5 +53,3 @@ func (ks *Keys) Bind(tbl *builder.Table) {
 		}
 	}
 }
-
-

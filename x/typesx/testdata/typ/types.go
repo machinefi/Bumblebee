@@ -5,7 +5,7 @@ import (
 	"encoding"
 	"fmt"
 
-	"github.com/saitofun/qkit/x/typesx/testdata/typ/typ"
+	"github.com/iotexproject/Bumblebee/x/typesx/testdata/typ/typ"
 )
 
 type String string

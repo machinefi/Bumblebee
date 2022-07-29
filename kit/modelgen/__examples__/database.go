@@ -1,5 +1,5 @@
 package example
 
-import "github.com/saitofun/qkit/kit/sqlx"
+import "github.com/iotexproject/Bumblebee/kit/sqlx"
 
 var DB = sqlx.NewDatabase("test")

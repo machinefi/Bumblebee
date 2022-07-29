@@ -9,10 +9,10 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/saitofun/qkit/x/ptrx"
-	. "github.com/saitofun/qkit/x/typesx"
-	"github.com/saitofun/qkit/x/typesx/testdata/typ"
-	typ2 "github.com/saitofun/qkit/x/typesx/testdata/typ/typ"
+	"github.com/iotexproject/Bumblebee/x/ptrx"
+	. "github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/iotexproject/Bumblebee/x/typesx/testdata/typ"
+	typ2 "github.com/iotexproject/Bumblebee/x/typesx/testdata/typ/typ"
 )
 
 func TestTypeFor(t *testing.T) {

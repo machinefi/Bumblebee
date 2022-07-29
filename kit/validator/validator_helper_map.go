@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/saitofun/qkit/kit/validator/rules"
+	"github.com/iotexproject/Bumblebee/kit/validator/rules"
 )
 
 func MapRuleParam(ctx context.Context, r *Rule) (key, elem Validator, err error) {

@@ -10,7 +10,7 @@ import (
 	"database/sql/driver"
 	"errors"
 
-	"github.com/saitofun/qkit/kit/enum"
+	"github.com/iotexproject/Bumblebee/kit/enum"
 )
 
 var InvalidSample = errors.New("invalid Sample type")

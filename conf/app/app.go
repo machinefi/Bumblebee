@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/saitofun/qkit/conf/deploy"
-	"github.com/saitofun/qkit/conf/log"
+	"github.com/iotexproject/Bumblebee/conf/deploy"
+	"github.com/iotexproject/Bumblebee/conf/log"
 	"gopkg.in/yaml.v2"
 )
 

@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"regexp"
 
-	"github.com/saitofun/qkit/kit/validator/errors"
-	"github.com/saitofun/qkit/kit/validator/rules"
+	"github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/iotexproject/Bumblebee/kit/validator/rules"
 )
 
 var (

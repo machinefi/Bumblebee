@@ -5,8 +5,8 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/saitofun/qkit/gen/codegen"
-	"github.com/saitofun/qkit/x/pkgx"
+	"github.com/iotexproject/Bumblebee/gen/codegen"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 	"github.com/saitofun/qlib/util/qnaming"
 )
 

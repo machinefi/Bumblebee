@@ -3,8 +3,8 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/saitofun/qkit/kit/modelgen"
-	"github.com/saitofun/qkit/x/pkgx"
+	"github.com/iotexproject/Bumblebee/kit/modelgen"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 )
 
 func init() {

@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/saitofun/qkit/x/typesx"
+	"github.com/iotexproject/Bumblebee/x/typesx"
 )
 
 type ColumnType struct {

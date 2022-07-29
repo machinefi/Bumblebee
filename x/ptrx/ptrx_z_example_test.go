@@ -3,7 +3,7 @@ package ptrx_test
 import (
 	"fmt"
 
-	"github.com/saitofun/qkit/x/ptrx"
+	"github.com/iotexproject/Bumblebee/x/ptrx"
 )
 
 func Example() {

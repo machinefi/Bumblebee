@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/saitofun/qkit/base/types"
+	"github.com/iotexproject/Bumblebee/base/types"
 )
 
 type Retry struct {

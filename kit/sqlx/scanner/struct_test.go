@@ -8,7 +8,7 @@ import (
 
 	"github.com/DATA-DOG/go-sqlmock"
 
-	"github.com/saitofun/qkit/kit/sqlx/scanner/nullable"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/scanner/nullable"
 )
 
 //go:linkname scan github.com/saitofun/qkit/kit/sqlx/scanner.scan

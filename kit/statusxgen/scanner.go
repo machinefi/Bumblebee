@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/saitofun/qkit/kit/statusx"
-	"github.com/saitofun/qkit/x/pkgx"
-	"github.com/saitofun/qkit/x/typesx"
+	"github.com/iotexproject/Bumblebee/kit/statusx"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/iotexproject/Bumblebee/x/typesx"
 )
 
 func NewScanner(pkg *pkgx.Pkg) *Scanner {

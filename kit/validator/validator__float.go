@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/saitofun/qkit/kit/validator/errors"
-	"github.com/saitofun/qkit/kit/validator/rules"
-	"github.com/saitofun/qkit/x/ptrx"
-	"github.com/saitofun/qkit/x/typesx"
+	"github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/iotexproject/Bumblebee/kit/validator/rules"
+	"github.com/iotexproject/Bumblebee/x/ptrx"
+	"github.com/iotexproject/Bumblebee/x/typesx"
 )
 
 type Float struct {

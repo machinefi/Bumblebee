@@ -5,10 +5,10 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/iotexproject/Bumblebee/kit/validator"
+	"github.com/iotexproject/Bumblebee/x/ptrx"
+	"github.com/iotexproject/Bumblebee/x/typesx"
 	. "github.com/onsi/gomega"
-	"github.com/saitofun/qkit/kit/validator"
-	"github.com/saitofun/qkit/x/ptrx"
-	"github.com/saitofun/qkit/x/typesx"
 )
 
 func TestInt_New(t *testing.T) {

@@ -12,7 +12,7 @@ import (
 	"github.com/saitofun/qlib/util/qnaming"
 	"golang.org/x/tools/go/packages"
 
-	"github.com/saitofun/qkit/gen/codegen/internal/format"
+	"github.com/iotexproject/Bumblebee/gen/codegen/internal/format"
 )
 
 type File struct {

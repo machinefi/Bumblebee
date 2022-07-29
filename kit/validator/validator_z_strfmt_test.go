@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
+	. "github.com/iotexproject/Bumblebee/kit/validator"
+	. "github.com/iotexproject/Bumblebee/kit/validator/strfmt"
 	. "github.com/onsi/gomega"
-	. "github.com/saitofun/qkit/kit/validator"
-	. "github.com/saitofun/qkit/kit/validator/strfmt"
 )
 
 func ExampleNewRegexpStrfmtValidator() {

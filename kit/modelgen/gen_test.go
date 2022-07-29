@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	_ "unsafe"
 
-	"github.com/saitofun/qkit/gen/codegen"
-	. "github.com/saitofun/qkit/kit/modelgen"
-	"github.com/saitofun/qkit/x/pkgx"
+	"github.com/iotexproject/Bumblebee/gen/codegen"
+	. "github.com/iotexproject/Bumblebee/kit/modelgen"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 )
 
 //go:linkname model github.com/saitofun/qkit/kit/modelgen.model

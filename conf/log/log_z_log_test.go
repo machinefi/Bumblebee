@@ -3,7 +3,7 @@ package log_test
 import (
 	"context"
 
-	. "github.com/saitofun/qkit/conf/log"
+	. "github.com/iotexproject/Bumblebee/conf/log"
 )
 
 func ExampleLogger() {

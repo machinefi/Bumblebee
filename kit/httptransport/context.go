@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/saitofun/qkit/kit/kit"
-	"github.com/saitofun/qkit/x/contextx"
+	"github.com/iotexproject/Bumblebee/kit/kit"
+	"github.com/iotexproject/Bumblebee/x/contextx"
 )
 
 type ServiceMeta struct {

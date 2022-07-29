@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	. "github.com/saitofun/qkit/gen/codegen"
+	. "github.com/iotexproject/Bumblebee/gen/codegen"
 )
 
 func CreateDemoFile() *File {

@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"unicode"
 
-	"github.com/saitofun/qkit/kit/validator/errors"
-	"github.com/saitofun/qkit/x/ptrx"
+	"github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/iotexproject/Bumblebee/x/ptrx"
 )
 
 func MaxUint(bits uint) uint64 { return 1<<bits - 1 }

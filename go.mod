@@ -1,4 +1,4 @@
-module github.com/saitofun/qkit
+module github.com/iotexproject/Bumblebee
 
 go 1.18
 

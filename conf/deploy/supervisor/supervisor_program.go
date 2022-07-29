@@ -1,9 +1,9 @@
 package supervisor
 
 import (
-	"github.com/saitofun/qkit/base/cmd"
-	"github.com/saitofun/qkit/base/types"
-	"github.com/saitofun/qkit/conf/section_config"
+	"github.com/iotexproject/Bumblebee/base/cmd"
+	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/iotexproject/Bumblebee/conf/section_config"
 )
 
 type Program struct {

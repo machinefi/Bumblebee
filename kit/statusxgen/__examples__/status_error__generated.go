@@ -6,7 +6,7 @@
 package examples
 
 import (
-	"github.com/saitofun/qkit/kit/statusx"
+	"github.com/iotexproject/Bumblebee/kit/statusx"
 )
 
 var _ statusx.Error = (*StatusError)(nil)

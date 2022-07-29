@@ -10,12 +10,12 @@ import (
 	"reflect"
 	"strings"
 
+	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/iotexproject/Bumblebee/conf/deploy"
+	"github.com/iotexproject/Bumblebee/conf/env"
+	"github.com/iotexproject/Bumblebee/x/misc/must"
+	"github.com/iotexproject/Bumblebee/x/reflectx"
 	"github.com/pkg/errors"
-	"github.com/saitofun/qkit/base/types"
-	"github.com/saitofun/qkit/conf/deploy"
-	"github.com/saitofun/qkit/conf/env"
-	"github.com/saitofun/qkit/x/misc/must"
-	"github.com/saitofun/qkit/x/reflectx"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
 )

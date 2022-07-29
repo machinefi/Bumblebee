@@ -3,8 +3,8 @@ package rules_test
 import (
 	"testing"
 
+	"github.com/iotexproject/Bumblebee/kit/validator/rules"
 	. "github.com/onsi/gomega"
-	"github.com/saitofun/qkit/kit/validator/rules"
 )
 
 func TestSlashAndUnSlash(t *testing.T) {

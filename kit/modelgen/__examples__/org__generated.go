@@ -8,8 +8,8 @@ package example
 import (
 	"fmt"
 
-	"github.com/saitofun/qkit/kit/sqlx"
-	"github.com/saitofun/qkit/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/kit/sqlx"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 )
 
 var OrgTable *builder.Table

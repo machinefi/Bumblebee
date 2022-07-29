@@ -7,8 +7,8 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"github.com/saitofun/qkit/x/misc/timer"
-	"github.com/saitofun/qkit/x/pkgx"
+	"github.com/iotexproject/Bumblebee/x/misc/timer"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 )
 
 var Cmd = &cobra.Command{

@@ -4,8 +4,8 @@ import (
 	"context"
 	"io"
 
-	"github.com/saitofun/qkit/kit/sqlx"
-	"github.com/saitofun/qkit/x/contextx"
+	"github.com/iotexproject/Bumblebee/kit/sqlx"
+	"github.com/iotexproject/Bumblebee/x/contextx"
 )
 
 type key struct{}

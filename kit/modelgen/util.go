@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/saitofun/qkit/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 )
 
 func forEachStructField(st *types.Struct, each func(v *types.Var, name, tag string)) {

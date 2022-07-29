@@ -3,10 +3,10 @@ package postgrestestutil
 import (
 	"net/url"
 
-	"github.com/saitofun/qkit/conf/app"
-	"github.com/saitofun/qkit/conf/log"
-	"github.com/saitofun/qkit/conf/postgres"
-	"github.com/saitofun/qkit/kit/sqlx"
+	"github.com/iotexproject/Bumblebee/conf/app"
+	"github.com/iotexproject/Bumblebee/conf/log"
+	"github.com/iotexproject/Bumblebee/conf/postgres"
+	"github.com/iotexproject/Bumblebee/kit/sqlx"
 )
 
 type TestEndpoint struct{ postgres.Endpoint }

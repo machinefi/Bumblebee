@@ -4,11 +4,11 @@ import (
 	"context"
 	"testing"
 
+	"github.com/iotexproject/Bumblebee/testutil/buildertestutil"
 	"github.com/onsi/gomega"
-	"github.com/saitofun/qkit/testutil/buildertestutil"
 
-	"github.com/saitofun/qkit/kit/sqlx/builder"
-	"github.com/saitofun/qkit/kit/sqlx/driver/postgres"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/driver/postgres"
 )
 
 func TestConnector(t *testing.T) {

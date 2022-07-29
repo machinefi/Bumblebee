@@ -3,7 +3,7 @@ package scanner
 import (
 	"reflect"
 
-	"github.com/saitofun/qkit/x/reflectx"
+	"github.com/iotexproject/Bumblebee/x/reflectx"
 )
 
 type ScanIterator interface {

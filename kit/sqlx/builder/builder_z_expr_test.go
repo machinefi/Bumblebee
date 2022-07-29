@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
+	. "github.com/iotexproject/Bumblebee/testutil/buildertestutil"
 	g "github.com/onsi/gomega"
-	. "github.com/saitofun/qkit/testutil/buildertestutil"
 
-	. "github.com/saitofun/qkit/kit/sqlx/builder"
+	. "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 )
 
 func TestResolveExpr(t *testing.T) {

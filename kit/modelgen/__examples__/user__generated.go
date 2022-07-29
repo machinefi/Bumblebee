@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/saitofun/qkit/base/types"
-	"github.com/saitofun/qkit/kit/sqlx"
-	"github.com/saitofun/qkit/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/iotexproject/Bumblebee/kit/sqlx"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 )
 
 var UserTable *builder.Table

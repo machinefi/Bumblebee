@@ -7,11 +7,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/saitofun/qkit/x/contextx"
-	"github.com/saitofun/qkit/x/misc/clone"
-	"github.com/saitofun/qkit/x/misc/must"
-	"github.com/saitofun/qkit/x/reflectx"
-	"github.com/saitofun/qkit/x/typesx"
+	"github.com/iotexproject/Bumblebee/x/contextx"
+	"github.com/iotexproject/Bumblebee/x/misc/clone"
+	"github.com/iotexproject/Bumblebee/x/misc/must"
+	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/iotexproject/Bumblebee/x/typesx"
 )
 
 type FieldValues map[string]interface{}

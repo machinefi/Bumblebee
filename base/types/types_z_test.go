@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
+	. "github.com/iotexproject/Bumblebee/base/types"
 	. "github.com/onsi/gomega"
-	. "github.com/saitofun/qkit/base/types"
 )
 
 func TestAddress(t *testing.T) {

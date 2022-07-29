@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	_ "unsafe"
 
-	"github.com/saitofun/qkit/gen/codegen"
-	"github.com/saitofun/qkit/kit/enumgen"
-	"github.com/saitofun/qkit/x/pkgx"
+	"github.com/iotexproject/Bumblebee/gen/codegen"
+	"github.com/iotexproject/Bumblebee/kit/enumgen"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 )
 
 //go:linkname _enum github.com/saitofun/qkit/kit/enumgen._enum

@@ -5,9 +5,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/saitofun/qkit/kit/sqlx"
-	"github.com/saitofun/qkit/kit/sqlx/builder"
-	"github.com/saitofun/qkit/x/misc/slice"
+	"github.com/iotexproject/Bumblebee/kit/sqlx"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/x/misc/slice"
 )
 
 var reUsing = regexp.MustCompile(`USING ([^ ]+)`)

@@ -3,7 +3,7 @@ package example
 import (
 	"database/sql/driver"
 
-	"github.com/saitofun/qkit/base/types"
+	"github.com/iotexproject/Bumblebee/base/types"
 )
 
 // @def primary ID

@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/saitofun/qkit/x/pkgx"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 	"github.com/saitofun/qlib/util/qnaming"
 )
 

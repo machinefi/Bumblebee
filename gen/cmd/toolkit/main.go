@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/saitofun/qkit/gen/cmd/toolkit/cmd"
+	"github.com/iotexproject/Bumblebee/gen/cmd/toolkit/cmd"
 )
 
 var command = &cobra.Command{

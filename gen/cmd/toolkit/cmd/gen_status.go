@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/saitofun/qkit/kit/statusxgen"
-	"github.com/saitofun/qkit/x/pkgx"
+	"github.com/iotexproject/Bumblebee/kit/statusxgen"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 	"github.com/spf13/cobra"
 )
 

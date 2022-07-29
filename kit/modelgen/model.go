@@ -7,9 +7,9 @@ import (
 	"sort"
 	"strings"
 
-	g "github.com/saitofun/qkit/gen/codegen"
-	"github.com/saitofun/qkit/kit/sqlx/builder"
-	"github.com/saitofun/qkit/x/pkgx"
+	g "github.com/iotexproject/Bumblebee/gen/codegen"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 	"github.com/saitofun/qlib/util/qnaming"
 )
 

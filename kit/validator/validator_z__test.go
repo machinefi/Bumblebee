@@ -4,8 +4,8 @@ import (
 	"context"
 	"reflect"
 
-	"github.com/saitofun/qkit/kit/validator"
-	"github.com/saitofun/qkit/x/typesx"
+	"github.com/iotexproject/Bumblebee/kit/validator"
+	"github.com/iotexproject/Bumblebee/x/typesx"
 )
 
 var (

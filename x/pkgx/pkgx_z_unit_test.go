@@ -13,8 +13,8 @@ import (
 	"strings"
 	"testing"
 
+	. "github.com/iotexproject/Bumblebee/x/pkgx"
 	. "github.com/onsi/gomega"
-	. "github.com/saitofun/qkit/x/pkgx"
 )
 
 func TestImportPathAndExpose(t *testing.T) {

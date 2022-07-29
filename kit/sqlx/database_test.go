@@ -11,13 +11,13 @@ import (
 	"github.com/google/uuid"
 	. "github.com/onsi/gomega"
 
-	"github.com/saitofun/qkit/base/types"
-	"github.com/saitofun/qkit/conf/log"
-	"github.com/saitofun/qkit/kit/metax"
-	"github.com/saitofun/qkit/kit/sqlx"
-	"github.com/saitofun/qkit/kit/sqlx/builder"
-	"github.com/saitofun/qkit/kit/sqlx/driver/postgres"
-	"github.com/saitofun/qkit/kit/sqlx/migration"
+	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/iotexproject/Bumblebee/conf/log"
+	"github.com/iotexproject/Bumblebee/kit/metax"
+	"github.com/iotexproject/Bumblebee/kit/sqlx"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/driver/postgres"
+	"github.com/iotexproject/Bumblebee/kit/sqlx/migration"
 )
 
 var connectors map[string]driver.Connector

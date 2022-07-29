@@ -10,7 +10,7 @@ import (
 
 	"golang.org/x/tools/go/packages"
 
-	"github.com/saitofun/qkit/x/mapx"
+	"github.com/iotexproject/Bumblebee/x/mapx"
 )
 
 var (

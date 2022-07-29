@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"runtime"
 
-	. "github.com/saitofun/qkit/gen/codegen"
+	. "github.com/iotexproject/Bumblebee/gen/codegen"
 )
 
 func ExampleVar() {

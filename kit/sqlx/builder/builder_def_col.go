@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/saitofun/qkit/x/typesx"
+	"github.com/iotexproject/Bumblebee/x/typesx"
 )
 
 type Column struct {

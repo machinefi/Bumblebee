@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/saitofun/qkit/kit/validator/errors"
+	"github.com/iotexproject/Bumblebee/kit/validator/errors"
 )
 
 // Float helper

@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/saitofun/qkit/kit/validator/errors"
-	"github.com/saitofun/qkit/kit/validator/rules"
-	"github.com/saitofun/qkit/x/contextx"
-	"github.com/saitofun/qkit/x/reflectx"
-	"github.com/saitofun/qkit/x/typesx"
+	"github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/iotexproject/Bumblebee/kit/validator/rules"
+	"github.com/iotexproject/Bumblebee/x/contextx"
+	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/iotexproject/Bumblebee/x/typesx"
 	"github.com/saitofun/qlib/encoding/qtext"
 )
 

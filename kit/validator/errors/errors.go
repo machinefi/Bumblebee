@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/saitofun/qkit/x/reflectx"
+	"github.com/iotexproject/Bumblebee/x/reflectx"
 )
 
 type SyntaxError struct{ msg string }
