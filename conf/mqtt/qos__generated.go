@@ -1,7 +1,5 @@
 // This is a generated source file. DO NOT EDIT
-// Version: 0.0.1
 // Source: mqtt/qos__generated.go
-// Date: Jul 26 16:16:39
 
 package mqtt
 
@@ -80,7 +78,7 @@ func (v QOS) Label() string {
 }
 
 func (v QOS) TypeName() string {
-	return "github.com/saitofun/qkit/conf/mqtt.QOS"
+	return "github.com/iotexproject/Bumblebee/conf/mqtt.QOS"
 }
 
 func (v QOS) ConstValues() []enum.IntStringerEnum {
