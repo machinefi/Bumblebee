@@ -4,15 +4,11 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	_ "unsafe"
 
 	"github.com/iotexproject/Bumblebee/gen/codegen"
 	. "github.com/iotexproject/Bumblebee/kit/modelgen"
 	"github.com/iotexproject/Bumblebee/x/pkgx"
 )
-
-//go:linkname model github.com/saitofun/qkit/kit/modelgen.model
-func model(*Generator, string) *Model
 
 var (
 	g *Generator
@@ -46,7 +42,7 @@ func init() {
 	g.Output(cwd)
 
 	f = codegen.NewFile("example", "mock.go") // mock codegen.File
-	m = model(g, "User")
+	m = GetModelByName(g, "User")
 	if m == nil {
 		panic("should scanned `User` model")
 	}
@@ -112,7 +108,6 @@ func ExampleModel_SnippetComments() {
 }
 
 func ExampleModel_SnippetColDesc() {
-	// TODO this should be failed because `map` cannot be sorted, Add codegen.Valuer
 	fmt.Println(string(m.SnippetColDesc(f).Bytes()))
 	// Output:
 	// func ( User) ColDesc() map[string][]string {
@@ -340,7 +335,7 @@ func ExampleModel_SnippetCount() {
 }
 
 func ExampleModel_SnippetCRUDByUniqueKeys() {
-	ss := m.SnippetCRUDByUniqueKeys(f)
+	ss := m.SnippetCRUDByUniqueKeys(f, "primary", "ui_name")
 	for _, s := range ss {
 		fmt.Print(string(s.Bytes()))
 	}
@@ -375,24 +370,6 @@ func ExampleModel_SnippetCRUDByUniqueKeys() {
 	// ),
 	// ),
 	// builder.Comment("User.FetchByName"),
-	// ),
-	// m,
-	// )
-	// return err
-	// }func (m *User) FetchByIDAndOrgID(db sqlx.DBExecutor) error {
-	// tbl := db.T(m)
-	// err := db.QueryAndScan(
-	// builder.Select(nil).
-	// From(
-	// tbl,
-	// builder.Where(
-	// builder.And(
-	// tbl.ColByFieldName("ID").Eq(m.ID),
-	// tbl.ColByFieldName("OrgID").Eq(m.OrgID),
-	// tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
-	// ),
-	// ),
-	// builder.Comment("User.FetchByIDAndOrgID"),
 	// ),
 	// m,
 	// )
@@ -451,34 +428,6 @@ func ExampleModel_SnippetCRUDByUniqueKeys() {
 	// }func (m *User) UpdateByName(db sqlx.DBExecutor, zeros ...string) error {
 	// fvs := builder.FieldValueFromStructByNoneZero(m, zeros...)
 	// return m.UpdateByNameWithFVs(db, fvs)
-	// }func (m *User) UpdateByIDAndOrgIDWithFVs(db sqlx.DBExecutor, fvs builder.FieldValues) error {
-	//
-	// if _, ok := fvs["UpdatedAt"]; !ok {
-	// fvs["UpdatedAt"] = types.Timestamp{Time: time.Now()}
-	// }
-	// tbl := db.T(m)
-	// res, err := db.Exec(
-	// builder.Update(tbl).
-	// Where(
-	// builder.And(
-	// tbl.ColByFieldName("ID").Eq(m.ID),
-	// tbl.ColByFieldName("OrgID").Eq(m.OrgID),
-	// tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
-	// ),
-	// builder.Comment("User.UpdateByIDAndOrgIDWithFVs"),
-	// ).
-	// Set(tbl.AssignmentsByFieldValues(fvs)...),
-	// )
-	// if err != nil {
-	// return err
-	// }
-	// if affected, _ := res.RowsAffected(); affected == 0 {
-	// return m.FetchByIDAndOrgID(db)
-	// }
-	// return nil
-	// }func (m *User) UpdateByIDAndOrgID(db sqlx.DBExecutor, zeros ...string) error {
-	// fvs := builder.FieldValueFromStructByNoneZero(m, zeros...)
-	// return m.UpdateByIDAndOrgIDWithFVs(db, fvs)
 	// }func (m *User) Delete(db sqlx.DBExecutor) error {
 	// _, err := db.Exec(
 	// builder.Delete().
@@ -563,47 +512,6 @@ func ExampleModel_SnippetCRUDByUniqueKeys() {
 	// tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
 	// ),
 	// builder.Comment("User.SoftDeleteByName"),
-	// ).
-	// Set(tbl.AssignmentsByFieldValues(fvs)...),
-	// )
-	// return err
-	// }func (m *User) DeleteByIDAndOrgID(db sqlx.DBExecutor) error {
-	// tbl := db.T(m)
-	// _, err := db.Exec(
-	// builder.Delete().
-	// From(
-	// tbl,
-	// builder.Where(
-	// builder.And(
-	// tbl.ColByFieldName("ID").Eq(m.ID),
-	// tbl.ColByFieldName("OrgID").Eq(m.OrgID),
-	// tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
-	// ),
-	// ),
-	// builder.Comment("User.DeleteByIDAndOrgID"),
-	// ),
-	// )
-	// return err
-	// }func (m *User) SoftDeleteByIDAndOrgID(db sqlx.DBExecutor) error {
-	// tbl := db.T(m)
-	// fvs := builder.FieldValues{}
-	//
-	// if _, ok := fvs["DeletedAt"]; !ok {
-	// fvs["DeletedAt"] = types.Timestamp{Time: time.Now()}
-	// }
-	//
-	// if _, ok := fvs["UpdatedAt"]; !ok {
-	// fvs["UpdatedAt"] = types.Timestamp{Time: time.Now()}
-	// }
-	// _, err := db.Exec(
-	// builder.Update(db.T(m)).
-	// Where(
-	// builder.And(
-	// tbl.ColByFieldName("ID").Eq(m.ID),
-	// tbl.ColByFieldName("OrgID").Eq(m.OrgID),
-	// tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
-	// ),
-	// builder.Comment("User.SoftDeleteByIDAndOrgID"),
 	// ).
 	// Set(tbl.AssignmentsByFieldValues(fvs)...),
 	// )

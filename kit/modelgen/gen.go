@@ -36,11 +36,10 @@ func (g *Generator) Output(cwd string) {
 	filename := codegen.GenerateFileSuffix(path.Join(dir, qnaming.LowerSnakeCase(g.StructName)+".go"))
 	f := codegen.NewFile(g.pkg.Name, filename)
 	g.mod.WriteTo(f)
-	_, _ = f.Write(true)
+	_, _ = f.Write()
 }
 
-// model test only
-func model(g *Generator, name string) *Model {
+func GetModelByName(g *Generator, name string) *Model {
 	if g.StructName == name {
 		return g.mod
 	}
@@ -63,7 +62,7 @@ type Config struct {
 	FieldKeyUpdatedAt string
 }
 
-func (g *Config) SetDefaults() {
+func (g *Config) SetDefault() {
 	if g.FieldKeyDeletedAt == "" {
 		g.FieldKeyDeletedAt = "DeletedAt"
 	}

@@ -1,7 +1,5 @@
 // This is a generated source file. DO NOT EDIT
-// Version: 0.0.1
 // Source: example/scheme__generated.go
-// Date: Jul 25 22:33:17
 
 package example
 
@@ -96,7 +94,7 @@ func (v Scheme) Label() string {
 }
 
 func (v Scheme) TypeName() string {
-	return "github.com/saitofun/qkit/kit/enumgen/__examples__.Scheme"
+	return "github.com/iotexproject/Bumblebee/kit/enumgen/__examples__.Scheme"
 }
 
 func (v Scheme) ConstValues() []enum.IntStringerEnum {

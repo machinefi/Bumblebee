@@ -3,17 +3,27 @@ package typesx_test
 import (
 	"encoding"
 	"go/types"
+	"path/filepath"
 	"reflect"
+	"runtime"
 	"testing"
 	"unsafe"
 
 	. "github.com/onsi/gomega"
-
+	"github.com/iotexproject/Bumblebee/testutil/typesxtestutil/typ"
+	typ2 "github.com/iotexproject/Bumblebee/testutil/typesxtestutil/typ/typ"
+	"github.com/iotexproject/Bumblebee/x/misc/must"
+	"github.com/iotexproject/Bumblebee/x/pkgx"
 	"github.com/iotexproject/Bumblebee/x/ptrx"
 	. "github.com/iotexproject/Bumblebee/x/typesx"
-	"github.com/iotexproject/Bumblebee/x/typesx/testdata/typ"
-	typ2 "github.com/iotexproject/Bumblebee/x/typesx/testdata/typ/typ"
 )
+
+var pkgid string
+
+func init() {
+	_, current, _, _ := runtime.Caller(0)
+	pkgid = must.String(pkgx.PkgIdByPath(filepath.Dir(current)))
+}
 
 func TestTypeFor(t *testing.T) {
 	cases := []struct {
@@ -25,8 +35,8 @@ func TestTypeFor(t *testing.T) {
 		{"[]int", "[]int"},
 		{"[2]int", "[2]int"},
 		{"error", "error"},
-		{"typesx.GoType", "github.com/saitofun/qkit/x/typesx.GoType"},
-		{"typesx.ReflectType", "github.com/saitofun/qkit/x/typesx.ReflectType"},
+		{"typesx.GoType", pkgid + ".GoType"},
+		{"typesx.ReflectType", pkgid + ".ReflectType"},
 	}
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {

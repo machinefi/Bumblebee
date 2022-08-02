@@ -3,8 +3,6 @@ package reflectx
 import (
 	"bytes"
 	"reflect"
-
-	"github.com/iotexproject/Bumblebee/base/types"
 )
 
 func Indirect(v reflect.Value) reflect.Value {
@@ -37,8 +35,9 @@ func IsEmptyValue(v interface{}) bool {
 	if rv.Kind() == reflect.Invalid {
 		return true
 	}
+
 	if rv.IsValid() && rv.CanInterface() {
-		if chk, ok := rv.Interface().(types.ZeroChecker); ok {
+		if chk, ok := rv.Interface().(interface{ IsZero() bool }); ok {
 			return chk.IsZero()
 		}
 	}
@@ -56,7 +55,7 @@ func IsEmptyValue(v interface{}) bool {
 	case reflect.Ptr, reflect.Interface:
 		return IsEmptyValue(rv.Elem())
 	}
-	return true
+	return false
 }
 
 func TypeName(rt reflect.Type) string {

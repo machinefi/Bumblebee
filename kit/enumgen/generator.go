@@ -8,6 +8,7 @@ import (
 	"sort"
 
 	"github.com/iotexproject/Bumblebee/gen/codegen"
+	"github.com/iotexproject/Bumblebee/x/misc/must"
 	"github.com/iotexproject/Bumblebee/x/pkgx"
 	"github.com/saitofun/qlib/util/qnaming"
 	"golang.org/x/tools/go/packages"
@@ -45,37 +46,26 @@ func (g *Generator) Scan(names ...string) {
 
 func (g Generator) Output(cwd string) {
 	for tn, enum := range g.enums {
-		dir, _ := filepath.Rel(cwd, pkgDir(tn.Pkg().Path()))
+		dir, _ := filepath.Rel(
+			cwd,
+			must.String(pkgx.PkgPathByPath(tn.Pkg().Path(), packages.NeedName, packages.NeedFiles)),
+		)
 		filename := codegen.GenerateFileSuffix(
 			path.Join(dir, qnaming.LowerSnakeCase(enum.Name)+".go"))
 		f := codegen.NewFile(tn.Pkg().Name(), filename)
 		enum.WriteToFile(f)
 
-		if _, err := f.Write(true); err != nil {
+		if _, err := f.Write(); err != nil {
 			log.Printf("%s generate failed: %v", filename, err)
 		}
 	}
 }
 
-// _enum test only
-func _enum(g *Generator, name string) *Enum {
+func GetEnumByName(g *Generator, name string) *Enum {
 	for tn, enum := range g.enums {
 		if tn.Name() == name {
 			return enum
 		}
 	}
 	return nil
-}
-
-func pkgDir(path string) string {
-	pkgs, err := packages.Load(&packages.Config{
-		Mode: packages.NeedName | packages.NeedFiles,
-	}, path)
-	if err != nil {
-		panic(err)
-	}
-	if len(pkgs) == 0 {
-		panic("package `" + path + "` not found")
-	}
-	return filepath.Dir(pkgs[0].GoFiles[0])
 }

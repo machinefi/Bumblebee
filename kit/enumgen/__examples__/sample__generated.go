@@ -1,7 +1,5 @@
 // This is a generated source file. DO NOT EDIT
-// Version: 0.0.1
 // Source: example/sample__generated.go
-// Date: Jul 25 22:33:17
 
 package example
 
@@ -80,7 +78,7 @@ func (v Sample) Label() string {
 }
 
 func (v Sample) TypeName() string {
-	return "github.com/saitofun/qkit/kit/enumgen/__examples__.Sample"
+	return "github.com/iotexproject/Bumblebee/kit/enumgen/__examples__.Sample"
 }
 
 func (v Sample) ConstValues() []enum.IntStringerEnum {

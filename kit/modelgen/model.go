@@ -4,17 +4,21 @@ import (
 	"bytes"
 	"fmt"
 	"go/types"
+	"path/filepath"
+	"runtime"
 	"sort"
 	"strings"
 
 	g "github.com/iotexproject/Bumblebee/gen/codegen"
 	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	"github.com/iotexproject/Bumblebee/x/mapx"
+	"github.com/iotexproject/Bumblebee/x/misc/must"
 	"github.com/iotexproject/Bumblebee/x/pkgx"
 	"github.com/saitofun/qlib/util/qnaming"
 )
 
 func NewModel(pkg *pkgx.Pkg, tn *types.TypeName, doc string, cfg *Config) *Model {
-	cfg.SetDefaults()
+	cfg.SetDefault()
 	m := Model{
 		TypeName: tn,
 		Config:   cfg,
@@ -570,7 +574,7 @@ func IndexCond(f *g.File, fns ...string) string {
 // func (m *`Model`) DeleteByXXX(DBExecutor) error     // XXX is UniqueIndexNames
 // SoftDeleteByXXX to update `DeleteAt` flag as current time
 // func (m *`Model`) SoftDeleteByXXX(DBExecutor) error // XXX is UniqueIndexNames
-func (m *Model) SnippetCRUDByUniqueKeys(f *g.File) []g.Snippet {
+func (m *Model) SnippetCRUDByUniqueKeys(f *g.File, keys ...string) []g.Snippet {
 	if !m.WithMethods {
 		return nil
 	}
@@ -595,16 +599,24 @@ db.T(m),
 			),
 	}
 
+	set := mapx.Set[string]{}
+	if len(keys) > 0 {
+		set, _ = mapx.ToSet(keys, strings.ToLower)
+	}
+
 	m.Table.Keys.Range(func(k *builder.Key, _ int) {
+		if !k.IsUnique {
+			return
+		}
+		if len(set) != 0 && !set[strings.ToLower(k.Name)] {
+			return
+		}
 		fns := k.Def.FieldNames
 		kns := filterStrings(fns, func(s string, _ int) bool {
 			return m.HasDeletedAt && s != m.FieldKeyDeletedAt || !m.HasDeletedAt
 		})
 		if m.HasDeletedAt && k.IsPrimary() {
 			fns = append(fns, m.FieldKeyDeletedAt)
-		}
-		if !k.IsUnique {
-			return
 		}
 		xxx := strings.Join(kns, "And")
 		mthNameFetchBy := "FetchBy" + xxx
@@ -754,6 +766,14 @@ func (m *Model) WriteTo(f *g.File) {
 }
 
 var (
-	BuilderPkg = "github.com/saitofun/qkit/kit/sqlx/builder"
-	SQLxPkg    = "github.com/saitofun/qkit/kit/sqlx"
+	BuilderPkg = "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	SQLxPkg    = "github.com/iotexproject/Bumblebee/kit/sqlx"
 )
+
+func init() {
+	_, current, _, _ := runtime.Caller(0)
+	dir := filepath.Join(filepath.Dir(current), "../sqlx")
+	SQLxPkg = must.String(pkgx.PkgIdByPath(dir))
+	dir = filepath.Join(filepath.Dir(current), "../sqlx/builder")
+	BuilderPkg = must.String(pkgx.PkgIdByPath(dir))
+}

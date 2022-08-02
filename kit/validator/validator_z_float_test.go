@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"testing"
 
+	. "github.com/onsi/gomega"
 	"github.com/iotexproject/Bumblebee/kit/validator"
 	"github.com/iotexproject/Bumblebee/x/ptrx"
 	"github.com/iotexproject/Bumblebee/x/typesx"
-	. "github.com/onsi/gomega"
 )
 
 func TestFloat_New(t *testing.T) {
@@ -113,7 +113,7 @@ func TestFloat_New(t *testing.T) {
 		c.expect.SetDefault()
 		name := fmt.Sprintf("%s_%s%s|%s", c.name, c.typ, c.rule, c.expect.String())
 		t.Run(name, func(t *testing.T) {
-			ctx := validator.ContextWithCompiler(
+			ctx := validator.ContextWithFactory(
 				bg, validator.DefaultFactory,
 			)
 			r, err := validator.ParseRuleByType(
@@ -163,7 +163,7 @@ func TestFloat_Failed(t *testing.T) {
 		t.Run(
 			fmt.Sprintf("%02d|%s|%s", i+1, c.typ, rule.Bytes()),
 			func(t *testing.T) {
-				ctx := validator.ContextWithCompiler(
+				ctx := validator.ContextWithFactory(
 					bg, validator.DefaultFactory,
 				)
 				v := &validator.Float{}

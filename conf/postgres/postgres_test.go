@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
+	. "github.com/onsi/gomega"
 	"github.com/iotexproject/Bumblebee/conf/postgres"
 	"github.com/iotexproject/Bumblebee/testutil/postgrestestutil"
-	. "github.com/onsi/gomega"
 )
 
 func TestPostgres(t *testing.T) {

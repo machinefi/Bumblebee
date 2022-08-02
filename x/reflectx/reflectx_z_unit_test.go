@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	. "github.com/iotexproject/Bumblebee/x/reflectx"
 	. "github.com/onsi/gomega"
+	. "github.com/iotexproject/Bumblebee/x/reflectx"
 )
 
 type Foo struct {

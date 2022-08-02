@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	. "github.com/iotexproject/Bumblebee/kit/metax"
 	. "github.com/onsi/gomega"
+	. "github.com/iotexproject/Bumblebee/kit/metax"
 )
 
 func TestParseMeta(t *testing.T) {

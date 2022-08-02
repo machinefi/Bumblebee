@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	. "github.com/iotexproject/Bumblebee/testutil/buildertestutil"
 	g "github.com/onsi/gomega"
+	. "github.com/iotexproject/Bumblebee/testutil/buildertestutil"
 
 	. "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 )
@@ -123,8 +123,7 @@ func BenchmarkEx(b *testing.B) {
 			}
 		})
 
-		// TODO
-		b.Run("ByExprWithoutRecreated_TODO", func(b *testing.B) {
+		b.Run("ByExprWithoutRecreated", func(b *testing.B) {
 			l := Col("f_id").Lt(0)
 			r := Col("f_id").In([]int{1, 2, 3})
 

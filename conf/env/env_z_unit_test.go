@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
+	. "github.com/onsi/gomega"
 	"github.com/iotexproject/Bumblebee/base/types"
 	. "github.com/iotexproject/Bumblebee/conf/env"
-	. "github.com/onsi/gomega"
 	"github.com/saitofun/qlib/container/qptr"
 )
 

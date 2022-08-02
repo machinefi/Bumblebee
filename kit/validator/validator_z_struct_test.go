@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"testing"
 
+	. "github.com/onsi/gomega"
 	. "github.com/iotexproject/Bumblebee/kit/validator"
 	"github.com/iotexproject/Bumblebee/kit/validator/errors"
 	"github.com/iotexproject/Bumblebee/x/typesx"
-	. "github.com/onsi/gomega"
 )
 
 func TestStruct_New(t *testing.T) {
@@ -74,12 +74,15 @@ func ExampleNewStructValidator() {
 	var (
 		errs     = map[string]string{}
 		keyPaths = make([]string, 0)
+		flatten  = err.(*errors.ErrorSet).Flatten()
 	)
 
-	err.(*errors.ErrorSet).Flatten().Each(func(fieldErr *errors.FieldError) {
-		errs[fieldErr.Field.String()] = strconv.Quote(fieldErr.Error.Error())
-		keyPaths = append(keyPaths, fieldErr.Field.String())
-	})
+	flatten.Each(
+		func(ferr *errors.FieldError) {
+			errs[ferr.Field.String()] = strconv.Quote(ferr.Error.Error())
+			keyPaths = append(keyPaths, ferr.Field.String())
+		},
+	)
 
 	sort.Strings(keyPaths)
 

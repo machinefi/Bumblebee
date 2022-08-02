@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 	"testing"
 
+	. "github.com/onsi/gomega"
 	"github.com/iotexproject/Bumblebee/base/cmd"
 	"github.com/iotexproject/Bumblebee/base/types"
 	. "github.com/iotexproject/Bumblebee/conf/section_config"
-	. "github.com/onsi/gomega"
 )
 
 type Config struct {
