@@ -7,11 +7,11 @@ import (
 	"net/url"
 	"reflect"
 
-	pkgerr "github.com/pkg/errors"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
 	"github.com/iotexproject/Bumblebee/x/reflectx"
 	"github.com/iotexproject/Bumblebee/x/typesx"
+	pkgerr "github.com/pkg/errors"
 )
 
 func init() { DefaultFactory.Register(&URLEncoded{}) }

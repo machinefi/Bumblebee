@@ -11,7 +11,6 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/pkg/errors"
 	"github.com/iotexproject/Bumblebee/kit/httptransport"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/client/roundtrippers"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
@@ -20,6 +19,7 @@ import (
 	"github.com/iotexproject/Bumblebee/kit/statusx"
 	"github.com/iotexproject/Bumblebee/x/contextx"
 	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/pkg/errors"
 	"golang.org/x/net/http2"
 )
 

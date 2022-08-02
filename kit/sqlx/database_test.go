@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	. "github.com/onsi/gomega"
 	"github.com/iotexproject/Bumblebee/testutil/postgrestestutil"
+	. "github.com/onsi/gomega"
 
 	"github.com/iotexproject/Bumblebee/base/types"
 	"github.com/iotexproject/Bumblebee/conf/log"

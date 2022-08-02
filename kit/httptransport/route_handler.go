@@ -5,13 +5,13 @@ import (
 	"net/http"
 	"reflect"
 
-	"github.com/pkg/errors"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
 	"github.com/iotexproject/Bumblebee/kit/metax"
 	"github.com/iotexproject/Bumblebee/kit/statusx"
 	"github.com/iotexproject/Bumblebee/x/contextx"
 	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/pkg/errors"
 )
 
 type RouteHandler struct {

@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/eclipse/paho.mqtt.golang"
-	"github.com/pkg/errors"
 	"github.com/iotexproject/Bumblebee/base/types"
 	"github.com/iotexproject/Bumblebee/x/misc/retry"
+	"github.com/pkg/errors"
 )
 
 type Broker struct {

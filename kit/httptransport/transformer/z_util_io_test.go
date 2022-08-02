@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	. "github.com/onsi/gomega"
 	. "github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
+	. "github.com/onsi/gomega"
 )
 
 func BenchmarkBuffers(b *testing.B) {

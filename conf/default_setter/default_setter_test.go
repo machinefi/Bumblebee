@@ -3,9 +3,9 @@ package default_setter_test
 import (
 	"testing"
 
-	. "github.com/onsi/gomega"
 	"github.com/iotexproject/Bumblebee/conf/default_setter"
 	"github.com/iotexproject/Bumblebee/x/ptrx"
+	. "github.com/onsi/gomega"
 )
 
 func TestStruct(t *testing.T) {

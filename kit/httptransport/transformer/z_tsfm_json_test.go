@@ -7,9 +7,9 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	. "github.com/onsi/gomega"
 	"github.com/pkg/errors"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 
 	. "github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
 	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"

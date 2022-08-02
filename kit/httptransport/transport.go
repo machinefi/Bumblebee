@@ -10,13 +10,13 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/julienschmidt/httprouter"
-	"github.com/pkg/errors"
 	"github.com/iotexproject/Bumblebee/conf/log"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/handlers"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
 	"github.com/iotexproject/Bumblebee/kit/kit"
 	"github.com/iotexproject/Bumblebee/kit/validator"
+	"github.com/julienschmidt/httprouter"
+	"github.com/pkg/errors"
 )
 
 func MiddlewareChain(mw ...HttpMiddleware) HttpMiddleware {

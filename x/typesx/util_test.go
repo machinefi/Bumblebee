@@ -9,13 +9,13 @@ import (
 	"testing"
 	"unsafe"
 
-	. "github.com/onsi/gomega"
 	"github.com/iotexproject/Bumblebee/testutil/typesxtestutil/typ"
 	typ2 "github.com/iotexproject/Bumblebee/testutil/typesxtestutil/typ/typ"
 	"github.com/iotexproject/Bumblebee/x/misc/must"
 	"github.com/iotexproject/Bumblebee/x/pkgx"
 	"github.com/iotexproject/Bumblebee/x/ptrx"
 	. "github.com/iotexproject/Bumblebee/x/typesx"
+	. "github.com/onsi/gomega"
 )
 
 var pkgid string

@@ -14,8 +14,6 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/onsi/gomega"
-	pkgerr "github.com/pkg/errors"
 	. "github.com/iotexproject/Bumblebee/kit/httptransport"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
@@ -23,6 +21,8 @@ import (
 	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
 	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/pkg/types"
 	"github.com/iotexproject/Bumblebee/x/reflectx"
+	. "github.com/onsi/gomega"
+	pkgerr "github.com/pkg/errors"
 )
 
 var regexpContentTypeWithBoundary = regexp.MustCompile(`Content-Type: multipart/form-data; boundary=([A-Za-z0-9]+)`)
@@ -277,8 +277,8 @@ func ExampleNewRequestTsfmFactory() {
 	}
 
 	type Req struct {
-		Protocol types.Protocol `in:"query" name:"protocol,omitempty" default:"HTTP"`
-		QString  string         `in:"query" name:"string,omitempty"   default:"s"`
+		Protocol  types.Protocol `in:"query" name:"protocol,omitempty" default:"HTTP"`
+		QString   string         `in:"query" name:"string,omitempty"   default:"s"`
 		PlainBody PlainBody      `in:"body"  mime:"plain" validate:"@struct<json>"`
 	}
 

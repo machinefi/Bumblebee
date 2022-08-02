@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"testing"
 
-	. "github.com/onsi/gomega"
 	. "github.com/iotexproject/Bumblebee/kit/validator"
 	"github.com/iotexproject/Bumblebee/kit/validator/errors"
 	"github.com/iotexproject/Bumblebee/x/typesx"
+	. "github.com/onsi/gomega"
 )
 
 func TestStruct_New(t *testing.T) {

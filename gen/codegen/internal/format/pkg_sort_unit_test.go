@@ -5,8 +5,8 @@ import (
 	"runtime"
 	"testing"
 
-	. "github.com/onsi/gomega"
 	"github.com/iotexproject/Bumblebee/gen/codegen/internal/format"
+	. "github.com/onsi/gomega"
 )
 
 func TestStdLibSet_Read(t *testing.T) {

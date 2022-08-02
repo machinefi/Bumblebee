@@ -3,8 +3,8 @@ package builder_test
 import (
 	"testing"
 
-	"github.com/onsi/gomega"
 	. "github.com/iotexproject/Bumblebee/testutil/buildertestutil"
+	"github.com/onsi/gomega"
 
 	. "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 )

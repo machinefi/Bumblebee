@@ -6,9 +6,9 @@ import (
 	"strings"
 
 	"github.com/fatih/color"
-	"github.com/julienschmidt/httprouter"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	"github.com/iotexproject/Bumblebee/kit/kit"
+	"github.com/julienschmidt/httprouter"
 )
 
 type MethodDescriber interface {
