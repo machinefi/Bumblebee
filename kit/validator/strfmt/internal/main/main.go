@@ -6,8 +6,9 @@ import (
 	"go/token"
 	"strings"
 
-	g "github.com/iotexproject/Bumblebee/gen/codegen"
 	"github.com/saitofun/qlib/util/qnaming"
+
+	g "github.com/iotexproject/Bumblebee/gen/codegen"
 )
 
 func main() {

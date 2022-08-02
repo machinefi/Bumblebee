@@ -5,10 +5,11 @@ import (
 	"runtime"
 	"strings"
 
+	"github.com/saitofun/qlib/util/qnaming"
+
 	. "github.com/iotexproject/Bumblebee/gen/codegen"
 	"github.com/iotexproject/Bumblebee/x/misc/must"
 	"github.com/iotexproject/Bumblebee/x/pkgx"
-	"github.com/saitofun/qlib/util/qnaming"
 )
 
 type Enum struct {

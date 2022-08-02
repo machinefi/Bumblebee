@@ -9,9 +9,10 @@ import (
 	"os"
 	"reflect"
 
+	"github.com/saitofun/qlib/encoding/qtext"
+
 	"github.com/iotexproject/Bumblebee/base/types"
 	"github.com/iotexproject/Bumblebee/x/reflectx"
-	"github.com/saitofun/qlib/encoding/qtext"
 )
 
 type Decoder struct {

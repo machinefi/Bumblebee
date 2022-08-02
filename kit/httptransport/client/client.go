@@ -11,6 +11,9 @@ import (
 	"reflect"
 	"time"
 
+	"github.com/pkg/errors"
+	"golang.org/x/net/http2"
+
 	"github.com/iotexproject/Bumblebee/kit/httptransport"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/client/roundtrippers"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
@@ -19,8 +22,6 @@ import (
 	"github.com/iotexproject/Bumblebee/kit/statusx"
 	"github.com/iotexproject/Bumblebee/x/contextx"
 	"github.com/iotexproject/Bumblebee/x/typesx"
-	"github.com/pkg/errors"
-	"golang.org/x/net/http2"
 )
 
 type HttpTransport func(rt http.RoundTripper) http.RoundTripper

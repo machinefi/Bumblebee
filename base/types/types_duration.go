@@ -6,8 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/x/ptrx"
 	"github.com/saitofun/qlib/container/qptr"
+
+	"github.com/iotexproject/Bumblebee/x/ptrx"
 )
 
 type Duration time.Duration

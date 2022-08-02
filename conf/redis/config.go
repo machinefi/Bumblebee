@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/gomodule/redigo/redis"
+
 	"github.com/iotexproject/Bumblebee/base/types"
 )
 

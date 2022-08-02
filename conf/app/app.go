@@ -5,9 +5,10 @@ import (
 	"path/filepath"
 	"runtime"
 
+	"gopkg.in/yaml.v2"
+
 	"github.com/iotexproject/Bumblebee/conf/deploy"
 	"github.com/iotexproject/Bumblebee/conf/log"
-	"gopkg.in/yaml.v2"
 )
 
 type OptSetter = func(conf *Ctx)

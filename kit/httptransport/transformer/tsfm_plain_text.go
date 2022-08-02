@@ -5,9 +5,10 @@ import (
 	"io"
 	"net/textproto"
 
+	"github.com/saitofun/qlib/encoding/qtext"
+
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	"github.com/iotexproject/Bumblebee/x/typesx"
-	"github.com/saitofun/qlib/encoding/qtext"
 )
 
 func init() { DefaultFactory.Register(&PlainText{}) }

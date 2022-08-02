@@ -9,12 +9,13 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/saitofun/qlib/util/qnaming"
+
 	g "github.com/iotexproject/Bumblebee/gen/codegen"
 	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 	"github.com/iotexproject/Bumblebee/x/mapx"
 	"github.com/iotexproject/Bumblebee/x/misc/must"
 	"github.com/iotexproject/Bumblebee/x/pkgx"
-	"github.com/saitofun/qlib/util/qnaming"
 )
 
 func NewModel(pkg *pkgx.Pkg, tn *types.TypeName, doc string, cfg *Config) *Model {

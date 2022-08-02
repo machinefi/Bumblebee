@@ -11,6 +11,9 @@ import (
 	"reflect"
 	"sort"
 
+	"github.com/julienschmidt/httprouter"
+	pkgerr "github.com/pkg/errors"
+
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
 	"github.com/iotexproject/Bumblebee/kit/statusx"
@@ -18,8 +21,6 @@ import (
 	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
 	"github.com/iotexproject/Bumblebee/x/contextx"
 	"github.com/iotexproject/Bumblebee/x/reflectx"
-	"github.com/julienschmidt/httprouter"
-	pkgerr "github.com/pkg/errors"
 )
 
 type RequestTsfm struct {

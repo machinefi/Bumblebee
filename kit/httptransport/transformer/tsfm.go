@@ -8,10 +8,11 @@ import (
 	"reflect"
 	"sort"
 
+	"github.com/pkg/errors"
+
 	"github.com/iotexproject/Bumblebee/x/contextx"
 	"github.com/iotexproject/Bumblebee/x/mapx"
 	"github.com/iotexproject/Bumblebee/x/typesx"
-	"github.com/pkg/errors"
 )
 
 type Transformer interface {

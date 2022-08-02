@@ -7,11 +7,12 @@ import (
 	"reflect"
 	"testing"
 
+	. "github.com/onsi/gomega"
+
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	. "github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
 	"github.com/iotexproject/Bumblebee/x/ptrx"
 	"github.com/iotexproject/Bumblebee/x/typesx"
-	. "github.com/onsi/gomega"
 )
 
 func TestURLEncoded(t *testing.T) {

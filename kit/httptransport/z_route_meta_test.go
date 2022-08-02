@@ -6,6 +6,7 @@ import (
 	"sort"
 
 	"github.com/fatih/color"
+
 	. "github.com/iotexproject/Bumblebee/kit/httptransport"
 	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/cmd/app/routes"
 )

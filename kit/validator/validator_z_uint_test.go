@@ -5,9 +5,10 @@ import (
 	"reflect"
 	"testing"
 
+	. "github.com/onsi/gomega"
+
 	. "github.com/iotexproject/Bumblebee/kit/validator"
 	"github.com/iotexproject/Bumblebee/x/typesx"
-	. "github.com/onsi/gomega"
 )
 
 func TestUint_New(t *testing.T) {

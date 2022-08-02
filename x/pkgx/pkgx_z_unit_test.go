@@ -14,9 +14,10 @@ import (
 	"strings"
 	"testing"
 
+	. "github.com/onsi/gomega"
+
 	"github.com/iotexproject/Bumblebee/x/misc/must"
 	. "github.com/iotexproject/Bumblebee/x/pkgx"
-	. "github.com/onsi/gomega"
 )
 
 func TestImportPathAndExpose(t *testing.T) {

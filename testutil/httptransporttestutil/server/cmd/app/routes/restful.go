@@ -3,12 +3,13 @@ package routes
 import (
 	"context"
 
+	pkgerr "github.com/pkg/errors"
+
 	"github.com/iotexproject/Bumblebee/kit/httptransport"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	"github.com/iotexproject/Bumblebee/kit/kit"
 	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/pkg/errors"
 	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/pkg/types"
-	pkgerr "github.com/pkg/errors"
 )
 
 var RestfulRouter = kit.NewRouter(httptransport.Group("/restful"))

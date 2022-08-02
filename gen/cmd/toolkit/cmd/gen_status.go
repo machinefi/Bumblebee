@@ -1,9 +1,10 @@
 package cmd
 
 import (
+	"github.com/spf13/cobra"
+
 	"github.com/iotexproject/Bumblebee/kit/statusxgen"
 	"github.com/iotexproject/Bumblebee/x/pkgx"
-	"github.com/spf13/cobra"
 )
 
 func init() {

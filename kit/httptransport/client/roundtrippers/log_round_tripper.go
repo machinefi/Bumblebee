@@ -5,9 +5,10 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/pkg/errors"
+
 	"github.com/iotexproject/Bumblebee/conf/log"
 	"github.com/iotexproject/Bumblebee/x/misc/timer"
-	"github.com/pkg/errors"
 )
 
 type LogRoundTripper struct {

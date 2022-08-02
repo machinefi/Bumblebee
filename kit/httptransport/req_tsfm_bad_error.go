@@ -3,9 +3,10 @@ package httptransport
 import (
 	"net/http"
 
+	pkgerr "github.com/pkg/errors"
+
 	"github.com/iotexproject/Bumblebee/kit/statusx"
 	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
-	pkgerr "github.com/pkg/errors"
 )
 
 type BadRequestError interface {

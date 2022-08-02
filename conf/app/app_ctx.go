@@ -10,14 +10,15 @@ import (
 	"reflect"
 	"strings"
 
+	"github.com/pkg/errors"
+	"github.com/spf13/cobra"
+	"gopkg.in/yaml.v2"
+
 	"github.com/iotexproject/Bumblebee/base/types"
 	"github.com/iotexproject/Bumblebee/conf/deploy"
 	"github.com/iotexproject/Bumblebee/conf/env"
 	"github.com/iotexproject/Bumblebee/x/misc/must"
 	"github.com/iotexproject/Bumblebee/x/reflectx"
-	"github.com/pkg/errors"
-	"github.com/spf13/cobra"
-	"gopkg.in/yaml.v2"
 )
 
 type Ctx struct {

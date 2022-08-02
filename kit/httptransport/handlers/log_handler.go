@@ -7,11 +7,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/pkg/errors"
+
 	"github.com/iotexproject/Bumblebee/conf/log"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
 	"github.com/iotexproject/Bumblebee/kit/metax"
 	"github.com/iotexproject/Bumblebee/x/misc/timer"
-	"github.com/pkg/errors"
 )
 
 func LogHandler() func(handler http.Handler) http.Handler {

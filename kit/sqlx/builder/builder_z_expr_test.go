@@ -4,8 +4,9 @@ import (
 	"context"
 	"testing"
 
-	. "github.com/iotexproject/Bumblebee/testutil/buildertestutil"
 	g "github.com/onsi/gomega"
+
+	. "github.com/iotexproject/Bumblebee/testutil/buildertestutil"
 
 	. "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
 )

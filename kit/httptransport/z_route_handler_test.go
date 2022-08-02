@@ -6,11 +6,12 @@ import (
 	"testing"
 	"time"
 
+	. "github.com/onsi/gomega"
+
 	. "github.com/iotexproject/Bumblebee/kit/httptransport"
 	"github.com/iotexproject/Bumblebee/kit/httptransport/mock"
 	"github.com/iotexproject/Bumblebee/kit/kit"
 	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/cmd/app/routes"
-	. "github.com/onsi/gomega"
 )
 
 var (

@@ -5,8 +5,9 @@ import (
 	"os"
 	"testing"
 
-	. "github.com/iotexproject/Bumblebee/kit/httptransport"
 	. "github.com/onsi/gomega"
+
+	. "github.com/iotexproject/Bumblebee/kit/httptransport"
 )
 
 func TestServiceMeta(t *testing.T) {
