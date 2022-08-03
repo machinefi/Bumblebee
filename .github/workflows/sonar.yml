@@ -13,3 +13,6 @@ jobs:
 
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: '0fd628196c4781538ed308421472e7f336b942a1'
+        SONAR_HOST_URL: 'https://sonar.iotex.me'
