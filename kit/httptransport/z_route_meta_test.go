@@ -7,6 +7,8 @@ import (
 
 	"github.com/fatih/color"
 
+	"github.com/iotexproject/Bumblebee/base/consts"
+
 	. "github.com/iotexproject/Bumblebee/kit/httptransport"
 	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/cmd/app/routes"
 )
@@ -19,8 +21,8 @@ func ExampleGroup() {
 }
 
 func ExampleHttpRouteMeta() {
-	os.Setenv(EnvProjectName, "service-example")
-	os.Setenv(EnvProjectVersion, "1.0.0")
+	os.Setenv(consts.EnvProjectName, "service-example")
+	os.Setenv(consts.EnvProjectVersion, "1.0.0")
 
 	color.NoColor = true
 

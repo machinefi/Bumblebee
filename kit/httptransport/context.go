@@ -5,9 +5,12 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/iotexproject/Bumblebee/base/consts"
 	"github.com/iotexproject/Bumblebee/kit/kit"
 	"github.com/iotexproject/Bumblebee/x/contextx"
 )
+
+// TODO move to conf
 
 type ServiceMeta struct {
 	Name    string
@@ -16,10 +19,10 @@ type ServiceMeta struct {
 
 func (s *ServiceMeta) SetDefault() {
 	if s.Name == "" {
-		s.Name = os.Getenv(EnvProjectName)
+		s.Name = os.Getenv(consts.EnvProjectName)
 	}
 	if s.Version == "" {
-		s.Version = os.Getenv(EnvProjectVersion)
+		s.Version = os.Getenv(consts.EnvProjectVersion)
 	}
 }
 
@@ -29,12 +32,6 @@ func (s ServiceMeta) String() string {
 	}
 	return s.Name + "@" + s.Version
 }
-
-const (
-	EnvProjectName    = "PRJ_NAME"
-	EnvProjectFeat    = "PRJ_FEAT"
-	EnvProjectVersion = "PRJ_VERSION"
-)
 
 type (
 	keyHttpRequest     struct{} // keyHttpRequest pass original *http.Request
