@@ -14,6 +14,8 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
 
+	"github.com/iotexproject/Bumblebee/base/consts"
+
 	"github.com/iotexproject/Bumblebee/base/types"
 	"github.com/iotexproject/Bumblebee/conf/deploy"
 	"github.com/iotexproject/Bumblebee/conf/env"
@@ -39,10 +41,10 @@ func New(setters ...OptSetter) *Ctx {
 		setter(c)
 	}
 	c.cmd = &cobra.Command{}
-	if feat, ok := os.LookupEnv(envProjectFeat); ok {
+	if feat, ok := os.LookupEnv(consts.EnvProjectFeat); ok {
 		c.feat = feat
 	}
-	_ = os.Setenv(envProjectName, c.String())
+	_ = os.Setenv(consts.EnvProjectName, c.String())
 	return c
 }
 
@@ -211,11 +213,6 @@ func (c *Ctx) log(rv reflect.Value) {
 }
 
 type Marshaller func(v interface{}) ([]byte, error)
-
-const (
-	envProjectName = "PRJ_NAME"
-	envProjectFeat = "PRJ_FEAT"
-)
 
 // group returns config group name
 func (c *Ctx) group(rv reflect.Value) string {
