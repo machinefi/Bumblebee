@@ -6,7 +6,7 @@ import (
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/pkg/errors"
 
-	"github.com/saitofun/qkit/base/types"
+	"github.com/iotexproject/Bumblebee/base/types"
 )
 
 type Jwt struct {

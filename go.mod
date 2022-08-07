@@ -7,16 +7,18 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/eclipse/paho.mqtt.golang v1.4.1
 	github.com/fatih/color v1.13.0
+	github.com/golang-jwt/jwt/v4 v4.4.2
 	github.com/gomodule/redigo v1.8.9
 	github.com/google/uuid v1.3.0
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/lib/pq v1.10.6
 	github.com/onsi/gomega v1.20.0
 	github.com/pkg/errors v0.9.1
+	github.com/saitofun/qkit v0.0.0-20220803023436-f7c330c3be3c
 	github.com/saitofun/qlib v0.0.0-20220804014931-3a213f937710
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.5.0
-	go.opentelemetry.io/contrib/propagators/b3 v0.0.0-00010101000000-000000000000
+	go.opentelemetry.io/contrib/propagators/b3 v1.8.0
 	go.opentelemetry.io/otel v1.9.0
 	go.opentelemetry.io/otel/exporters/zipkin v0.0.0-00010101000000-000000000000
 	go.opentelemetry.io/otel/sdk v1.9.0

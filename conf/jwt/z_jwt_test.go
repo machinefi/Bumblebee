@@ -6,8 +6,9 @@ import (
 
 	"github.com/golang-jwt/jwt/v4"
 	. "github.com/onsi/gomega"
-	"github.com/saitofun/qkit/base/types"
-	. "github.com/saitofun/qkit/conf/jwt"
+
+	"github.com/iotexproject/Bumblebee/base/types"
+	. "github.com/iotexproject/Bumblebee/conf/jwt"
 )
 
 func TestJwt(t *testing.T) {
