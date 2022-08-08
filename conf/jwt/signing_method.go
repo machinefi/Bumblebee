@@ -1,6 +1,6 @@
 package jwt
 
-import "github.com/dgrijalva/jwt-go"
+import "github.com/golang-jwt/jwt/v4"
 
 //go:generate toolkit gen enum SigningMethod
 type SigningMethod uint8
