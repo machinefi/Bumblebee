@@ -71,11 +71,13 @@ func (s *SnippetLiteralCompose) Bytes() []byte {
 }
 
 /*
-	SnippetBlock code block, like
-	```go
-		var a = "Hello CodeGen"
-		fmt.Print(a)
-	```
+SnippetBlock code block, like
+```go
+
+	var a = "Hello CodeGen"
+	fmt.Print(a)
+
+```
 */
 type SnippetBlock []Snippet
 
@@ -96,13 +98,15 @@ func (s SnippetBlock) Bytes() []byte {
 }
 
 /*
-	SnippetBlockWithBrace code block quote with '{' and '}', like
-	```go
+SnippetBlockWithBrace code block quote with '{' and '}', like
+```go
+
 	{
 		var a = "Hello CodeGen"
 		fmt.Print(a)
 	}
-	```
+
+```
 */
 type SnippetBlockWithBrace []Snippet
 
@@ -222,6 +226,7 @@ func (s *SnippetKVExpr) Bytes() []byte {
 type SnippetTypeDecl struct {
 	Token token.Token
 	Specs []SnippetSpec
+	*SnippetComments
 }
 
 var _ Snippet = (*SnippetTypeDecl)(nil)
@@ -229,6 +234,11 @@ var _ Snippet = (*SnippetTypeDecl)(nil)
 func (s *SnippetTypeDecl) Bytes() []byte {
 	buf := bytes.NewBuffer(nil)
 	mul := len(s.Specs) > 1
+
+	if s.SnippetComments != nil {
+		buf.Write(s.SnippetComments.Bytes())
+		buf.WriteRune('\n')
+	}
 
 	buf.WriteString(s.Token.String())
 	buf.WriteRune(' ')
@@ -251,6 +261,13 @@ func (s *SnippetTypeDecl) Bytes() []byte {
 	}
 
 	return buf.Bytes()
+}
+
+func (s SnippetTypeDecl) WithComments(comments ...string) *SnippetTypeDecl {
+	if len(comments) > 0 {
+		s.SnippetComments = Comments(comments...)
+	}
+	return &s
 }
 
 // SnippetField define a field or var
