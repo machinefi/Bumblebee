@@ -531,6 +531,9 @@ func (m *Model) SnippetList(f *g.File) g.Snippet {
 // Count by condition and addition(offset, size)
 // func (m *`Model`) Count(DBExecutor, SqlCondition, Additions) (int64, error)
 func (m *Model) SnippetCount(f *g.File) g.Snippet {
+	if !m.WithMethods {
+		return nil
+	}
 	return g.Func(
 		g.Var(g.Type(f.Use(SQLxPkg, `DBExecutor`)), `db`),
 		g.Var(g.Type(f.Use(BuilderPkg, `SqlCondition`)), `cond`),
