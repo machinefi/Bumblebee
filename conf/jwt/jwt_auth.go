@@ -4,6 +4,7 @@ import (
 	"context"
 	"strings"
 
+	"github.com/iotexproject/Bumblebee/x/misc/must"
 	"github.com/pkg/errors"
 
 	"github.com/iotexproject/Bumblebee/x/contextx"
@@ -57,6 +58,12 @@ func WithConfContext(jwt *Jwt) func(context.Context) context.Context {
 func ConfFromContext(ctx context.Context) (*Jwt, bool) {
 	j, ok := ctx.Value(keyConf{}).(*Jwt)
 	return j, ok
+}
+
+func MustConfFromContext(ctx context.Context) *Jwt {
+	j, ok := ctx.Value(keyConf{}).(*Jwt)
+	must.BeTrue(ok)
+	return j
 }
 
 type keyAuth struct{}
