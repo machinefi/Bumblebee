@@ -31,7 +31,7 @@ func (b *Broker) SetDefault() {
 		b.Keepalive = types.Duration(3 * time.Hour)
 	}
 	if b.Server.IsZero() {
-		b.Server.Hostname, b.Server.Port = "127.0.0.1", 1883
+		b.Server.Hostname, b.Server.Port = "127.0.0.1", 18884
 	}
 	b.Server.Scheme = "mqtt"
 	if b.agents == nil {
