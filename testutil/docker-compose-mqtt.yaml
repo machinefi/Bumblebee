@@ -9,5 +9,5 @@ services:
       - ./var/mqtt/conf:/mosquitto/config
       - ./var/mqtt/log:/mosquitto/log
     ports:
-      - "18884:18884"
+      - "1883:1883"
       - "9001:9001"

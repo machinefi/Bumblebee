@@ -14,7 +14,7 @@ func TestBroker(t *testing.T) {
 	topic := "test_demo"
 	server := types.Endpoint{}
 
-	err := server.UnmarshalText([]byte("mqtt://broker.emqx.io:18884"))
+	err := server.UnmarshalText([]byte("mqtt://broker.emqx.io:1883"))
 	NewWithT(t).Expect(err).To(BeNil())
 
 	broker := &Broker{Server: server}
