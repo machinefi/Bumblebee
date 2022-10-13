@@ -12,8 +12,8 @@ import (
 )
 
 var (
-	start, _ = time.Parse(time.RFC3339, "2022-10-13T22:10:24Z")
-	sff      = snowflake_id.NewSnowflakeFactory(12, 10, 1, start)
+	start, _ = time.Parse(time.RFC3339, "2022-10-13T22:10:24+08:00")
+	sff      = snowflake_id.NewSnowflakeFactory(12, 10, 1, start.Local())
 )
 
 type Generator interface {
@@ -52,8 +52,8 @@ func MustGeneratorFromContext(ctx context.Context) Generator {
 }
 
 type SFIDGenerator interface {
-	NewSFID() (types.SFID, error)
-	NewSFIDs(n int) (types.SFIDs, error)
+	MustGenSFID() types.SFID
+	MustGenSFIDs(n int) types.SFIDs
 }
 
 type keySFIDGenerator struct{}

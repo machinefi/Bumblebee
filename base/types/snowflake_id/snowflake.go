@@ -46,7 +46,7 @@ func (f *SnowflakeFactory) init() {
 
 	maxTS, baseTS := uint64(1<<f.bitsTimestamp-1), f.SnowFlakeTimestamp(f.base)
 	seconds := int64(time.Duration(baseTS+maxTS) * f.unit / time.Second)
-	f.maxUnitTime = time.Unix(seconds, 0)
+	f.maxUnitTime = time.Unix(seconds, 0).In(time.UTC)
 }
 
 func (f *SnowflakeFactory) MaxWorkerID() uint32 { return f.maxWorkerID }
@@ -58,15 +58,15 @@ func (f *SnowflakeFactory) MaxUnitTime() time.Time { return f.maxUnitTime }
 func (f *SnowflakeFactory) MaskSequence(seq uint32) uint32 { return seq & f.maxSequence }
 
 func (f *SnowflakeFactory) SnowFlakeTimestamp(t time.Time) uint64 {
-	return uint64(t.UnixNano() / int64(f.unit))
+	return uint64(t.In(time.UTC).UnixNano() / int64(f.unit))
 }
 
 func (f *SnowflakeFactory) Sleep(d time.Duration) time.Duration {
-	return d*f.unit - time.Duration(time.Now().UnixNano())%f.unit*time.Nanosecond
+	return d*f.unit - time.Duration(time.Now().In(time.UTC).UnixNano())%f.unit*time.Nanosecond
 }
 
 func (f *SnowflakeFactory) Elapsed() uint64 {
-	return f.SnowFlakeTimestamp(time.Now()) - f.SnowFlakeTimestamp(f.base)
+	return f.SnowFlakeTimestamp(time.Now().In(time.UTC)) - f.SnowFlakeTimestamp(f.base.In(time.UTC))
 }
 
 func (f *SnowflakeFactory) BuildID(wid, seq uint32, elapsed uint64) (uint64, error) {
@@ -128,7 +128,7 @@ func (s *Snowflake) ID() (uint64, error) {
 }
 
 func genRandomSequence(n int32) uint32 {
-	return uint32(rand.New(rand.NewSource(time.Now().UnixNano())).Int31n(n))
+	return uint32(rand.New(rand.NewSource(time.Now().In(time.UTC).UnixNano())).Int31n(n))
 }
 
 func WorkerIDFromIP(ipv4 net.IP) uint32 {

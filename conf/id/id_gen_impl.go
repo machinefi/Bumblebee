@@ -35,22 +35,22 @@ func MustNewSFIDGeneratorWithWorkerID(wid uint32) SFIDGenerator {
 
 type SFIDGeneratorImpl struct{ *snowflake_id.Snowflake }
 
-func (sfg *SFIDGeneratorImpl) NewSFID() (types.SFID, error) {
+func (sfg *SFIDGeneratorImpl) MustGenSFID() types.SFID {
 	id, err := sfg.ID()
 	if err != nil {
-		return 0, err
+		panic(err)
 	}
-	return types.SFID(id), nil
+	return types.SFID(id)
 }
 
-func (sfg *SFIDGeneratorImpl) NewSFIDs(n int) (types.SFIDs, error) {
+func (sfg *SFIDGeneratorImpl) MustGenSFIDs(n int) types.SFIDs {
 	var ids = make(types.SFIDs, 0, n)
 	for i := 0; i < n; i++ {
 		id, err := sfg.ID()
 		if err != nil {
-			return nil, err
+			panic(err)
 		}
 		ids = append(ids, types.SFID(id))
 	}
-	return ids, nil
+	return ids
 }

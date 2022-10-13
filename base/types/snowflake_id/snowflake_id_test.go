@@ -47,6 +47,7 @@ func (s *SnowflakeTestSuite) Run(sf *Snowflake) {
 func BenchmarkSnowflake_ID(b *testing.B) {
 	start, _ := time.Parse(time.RFC3339, "2020-01-01T00:00:00Z")
 	cases := [][3]uint{
+		{11, 11, 1},
 		{10, 12, 1},
 		{12, 10, 1},
 		{12, 12, 1},
@@ -57,7 +58,7 @@ func BenchmarkSnowflake_ID(b *testing.B) {
 	}
 
 	for _, vs := range cases {
-		f := NewSnowflakeFactory(vs[0], vs[1], vs[2], start)
+		f := NewSnowflakeFactory(vs[0], vs[1], vs[2], start.Local())
 		s, err := f.NewSnowflake(1)
 		if err != nil {
 			b.Fatal(err)
