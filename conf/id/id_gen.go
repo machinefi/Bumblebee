@@ -34,6 +34,12 @@ func WithGenerator(ctx context.Context, g Generator) context.Context {
 	return contextx.WithValue(ctx, keyGenerator{}, g)
 }
 
+func WithGeneratorContext(g Generator) contextx.WithContext {
+	return func(ctx context.Context) context.Context {
+		return contextx.WithValue(ctx, keyGenerator{}, g)
+	}
+}
+
 func GeneratorFromContext(ctx context.Context) (Generator, bool) {
 	g, ok := ctx.Value(keyGenerator{}).(Generator)
 	return g, ok
@@ -54,6 +60,12 @@ type keySFIDGenerator struct{}
 
 func WithSFIDGenerator(ctx context.Context, g SFIDGenerator) context.Context {
 	return contextx.WithValue(ctx, keySFIDGenerator{}, g)
+}
+
+func WithSFIDGeneratorContext(g SFIDGenerator) contextx.WithContext {
+	return func(ctx context.Context) context.Context {
+		return contextx.WithValue(ctx, keySFIDGenerator{}, g)
+	}
 }
 
 func SFIDGeneratorFromContext(ctx context.Context) (SFIDGenerator, bool) {

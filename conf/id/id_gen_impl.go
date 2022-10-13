@@ -5,11 +5,11 @@ import (
 	"github.com/iotexproject/Bumblebee/base/types/snowflake_id"
 )
 
-func NewSFIDGenerator() (Generator, error) {
+func NewSFIDGenerator() (SFIDGenerator, error) {
 	return NewSFIDGeneratorWithWorkerID(snowflake_id.WorkerIDFromLocalIP())
 }
 
-func NewSFIDGeneratorWithWorkerID(wid uint32) (Generator, error) {
+func NewSFIDGeneratorWithWorkerID(wid uint32) (SFIDGenerator, error) {
 	sf, err := sff.NewSnowflake(wid)
 	if err != nil {
 		return nil, err
@@ -17,7 +17,7 @@ func NewSFIDGeneratorWithWorkerID(wid uint32) (Generator, error) {
 	return &SFIDGeneratorImpl{sf}, nil
 }
 
-func MustNewSFIDGenerator() Generator {
+func MustNewSFIDGenerator() SFIDGenerator {
 	g, err := NewSFIDGenerator()
 	if err != nil {
 		panic(err)
@@ -25,7 +25,7 @@ func MustNewSFIDGenerator() Generator {
 	return g
 }
 
-func MustNewSFIDGeneratorWithWorkerID(wid uint32) Generator {
+func MustNewSFIDGeneratorWithWorkerID(wid uint32) SFIDGenerator {
 	g, err := NewSFIDGeneratorWithWorkerID(wid)
 	if err != nil {
 		panic(err)
