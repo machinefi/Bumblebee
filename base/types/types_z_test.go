@@ -1,13 +1,10 @@
 package types_test
 
 import (
-	"fmt"
-	"net"
 	"net/url"
 	"testing"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/x/mapx"
 	. "github.com/onsi/gomega"
 
 	. "github.com/iotexproject/Bumblebee/base/types"
@@ -241,65 +238,4 @@ func TestEndpoint(t *testing.T) {
 }
 
 func TestSignal(t *testing.T) {
-}
-
-func TestWorkerIDFromIP(t *testing.T) {
-	t.Log(WorkerIDFromIP(net.ParseIP("255.255.255.255")))
-	t.Log(WorkerIDFromLocalIP())
-}
-
-func NewSnowflakeTestSuite(t *testing.T, n int) *SnowflakeTestSuite {
-	return &SnowflakeTestSuite{t, n, mapx.New[uint64, bool]()}
-}
-
-type SnowflakeTestSuite struct {
-	*testing.T
-	N int
-	*mapx.Map[uint64, bool]
-}
-
-func (s *SnowflakeTestSuite) ExpectN(n int) {
-	NewWithT(s.T).Expect(s.Len()).To(Equal(n))
-}
-
-func (s *SnowflakeTestSuite) Run(sf *Snowflake) {
-	for i := 1; i <= s.N; i++ {
-		id, err := sf.ID()
-		NewWithT(s.T).Expect(err).To(BeNil())
-		s.Store(id, true)
-	}
-}
-
-func BenchmarkSnowflake_ID(b *testing.B) {
-	start, _ := time.Parse(time.RFC3339, "2020-01-01T00:00:00Z")
-	cases := [][3]uint{
-		{10, 12, 1},
-		{16, 10, 1},
-		{16, 8, 1},
-		{16, 8, 5},
-		{16, 8, 10},
-	}
-
-	for _, vs := range cases {
-		f := NewSnowflakeFactory(vs[0], vs[1], vs[2], start)
-		s, err := f.NewSnowflake(1)
-		if err != nil {
-			b.Fatal(err)
-		}
-		name := fmt.Sprintf(
-			"END_%s__MAX_WORKER_%d_MAX_SEQ_%d_PER_%dms",
-			f.MaxTime(), f.MaxWorkerID(), f.MaxSequence(), vs[2],
-		)
-		b.Run(name, func(b *testing.B) {
-			for i := 0; i < b.N; i++ {
-				_, err = s.ID()
-				if err != nil {
-					b.Fatal(err)
-				}
-			}
-		})
-	}
-}
-
-func TestSnowflake(t *testing.T) {
 }
