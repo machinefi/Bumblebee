@@ -3,7 +3,6 @@ package app
 import (
 	"context"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path"
 	"path/filepath"
@@ -52,7 +51,9 @@ func (c *Ctx) Context() context.Context { return c.ctx }
 // Conf init all configs from yml file, and do initialization for each config.
 // config dir include `local.yml` `default.yml` and `master.yml`
 func (c *Ctx) Conf(configs ...interface{}) {
-	local, err := ioutil.ReadFile(filepath.Join(c.root, "./config/local.yml"))
+	cf := filepath.Join(c.root, "./config/local.yml")
+	fmt.Println("conf file: ", cf)
+	local, err := os.ReadFile(cf)
 	if err == nil {
 		kv := make(map[string]string)
 		if err = yaml.Unmarshal(local, &kv); err == nil {
