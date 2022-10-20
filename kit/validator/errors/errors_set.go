@@ -32,21 +32,36 @@ func (set *ErrorSet) Each(cb func(*FieldError)) {
 func (set *ErrorSet) Flatten() *ErrorSet {
 	ret := NewErrorSetWithRoot(set.root)
 
-	set.Each(
-		func(f *FieldError) {
-			if sub, ok := f.Error.(*ErrorSet); ok {
-				sub.Flatten().Each(
-					func(ff *FieldError) {
-						ret.AddErr(ff.Error, append(f.Field, ff.Field...)...)
-					},
-				)
+	var walk func(*ErrorSet, ...interface{})
+
+	walk = func(es *ErrorSet, patterns ...interface{}) {
+		es.Each(func(fe *FieldError) {
+			if sub, ok := fe.Error.(*ErrorSet); ok {
+				walk(sub, append(patterns, fe.Field...)...)
 			} else {
-				ret.AddErr(f.Error, f.Field...)
+				ret.AddErr(fe.Error, append(patterns, fe.Field...)...)
 			}
-		},
-	)
+		})
+	}
+
+	walk(set)
 
 	return ret
+
+	// set.Each(
+	// 	func(f *FieldError) {
+	// 		if sub, ok := f.Error.(*ErrorSet); ok {
+	// 			sub.Flatten().Each(
+	// 				func(ff *FieldError) {
+	// 					ret.AddErr(ff.Error, append(f.Field, ff.Field...)...)
+	// 				},
+	// 			)
+	// 		} else {
+	// 			ret.AddErr(f.Error, f.Field...)
+	// 		}
+	// 	},
+	// )
+	// return ret
 }
 func (set *ErrorSet) Len() int { return len(set.Flatten().errors) }
 
@@ -85,6 +100,10 @@ func (set *ErrorSet) ToErrorFields() statusx.ErrorFields {
 					Msg:   fieldErr.Error.Error(),
 				})
 			}
+		} else {
+			errorFields = append(errorFields, &statusx.ErrorField{
+				Msg: fieldErr.Error.Error(),
+			})
 		}
 	})
 
