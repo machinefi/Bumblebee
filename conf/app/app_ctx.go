@@ -3,6 +3,7 @@ package app
 import (
 	"context"
 	"fmt"
+	"log"
 	"os"
 	"path"
 	"path/filepath"
@@ -52,7 +53,7 @@ func (c *Ctx) Context() context.Context { return c.ctx }
 // config dir include `local.yml` `default.yml` and `master.yml`
 func (c *Ctx) Conf(configs ...interface{}) {
 	cf := filepath.Join(c.root, "./config/local.yml")
-	fmt.Println("conf file: ", cf)
+	log.Println("read config from: ", filepath.Join(c.root, "config"))
 	local, err := os.ReadFile(cf)
 	if err == nil {
 		kv := make(map[string]string)
