@@ -47,21 +47,6 @@ func (set *ErrorSet) Flatten() *ErrorSet {
 	walk(set)
 
 	return ret
-
-	// set.Each(
-	// 	func(f *FieldError) {
-	// 		if sub, ok := f.Error.(*ErrorSet); ok {
-	// 			sub.Flatten().Each(
-	// 				func(ff *FieldError) {
-	// 					ret.AddErr(ff.Error, append(f.Field, ff.Field...)...)
-	// 				},
-	// 			)
-	// 		} else {
-	// 			ret.AddErr(f.Error, f.Field...)
-	// 		}
-	// 	},
-	// )
-	// return ret
 }
 func (set *ErrorSet) Len() int { return len(set.Flatten().errors) }
 
