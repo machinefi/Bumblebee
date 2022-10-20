@@ -92,7 +92,7 @@ func (set *ErrorSet) ToErrorFields() statusx.ErrorFields {
 	errorFields := make([]*statusx.ErrorField, 0)
 
 	set.Flatten().Each(func(fieldErr *FieldError) {
-		if len(fieldErr.Field) > 1 {
+		if len(fieldErr.Field) > 0 {
 			if l, ok := fieldErr.Field[0].(Location); ok {
 				errorFields = append(errorFields, &statusx.ErrorField{
 					In:    string(l),
@@ -100,10 +100,6 @@ func (set *ErrorSet) ToErrorFields() statusx.ErrorFields {
 					Msg:   fieldErr.Error.Error(),
 				})
 			}
-		} else {
-			errorFields = append(errorFields, &statusx.ErrorField{
-				Msg: fieldErr.Error.Error(),
-			})
 		}
 	})
 
