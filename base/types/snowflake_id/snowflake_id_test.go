@@ -106,3 +106,14 @@ func TestSnowflake_Concurrent(t *testing.T) {
 	wg.Wait()
 	suite.ExpectN(suite.N * con)
 }
+
+func TestSnowflakeFactory_BuildIDx(t *testing.T) {
+	f, err := NewSnowflakeFactory(10, 12, 1, time.Now().In(time.UTC)).NewSnowflake(294)
+	NewWithT(t).Expect(err).To(BeNil())
+
+	for i := 0; i < 10000; i++ {
+		_, err := f.ID()
+		NewWithT(t).Expect(err).To(BeNil())
+		time.Sleep(100 * time.Microsecond)
+	}
+}

@@ -1,6 +1,7 @@
 package snowflake_id
 
 import (
+	"log"
 	"math/rand"
 	"net"
 	"os"
@@ -73,16 +74,30 @@ func (f *SnowflakeFactory) BuildID(wid, seq uint32, elapsed uint64) (uint64, err
 	if elapsed >= 1<<f.bitsTimestamp {
 		return 0, ErrOverTimeLimit
 	}
-	return elapsed<<(f.bitsSequence+f.bitsWorkerID) |
+	v := elapsed<<(f.bitsSequence+f.bitsWorkerID) |
 		uint64(seq)<<f.bitsWorkerID |
-		uint64(wid), nil
+		uint64(wid)
+	log.Printf("build %d w: %d seq: %2d elapsed: %d", v, wid, seq, elapsed)
+	return v, nil
+}
+
+func (f *SnowflakeFactory) BuildID2(wid, seq uint32, elapsed uint64) (uint64, error) {
+	if elapsed >= 1<<f.bitsTimestamp {
+		return 0, ErrOverTimeLimit
+	}
+	v := uint64(wid)<<(f.bitsSequence+f.bitsTimestamp) |
+		elapsed<<f.bitsSequence |
+		uint64(seq)
+	log.Printf("build %d w: %d seq: %2d elapsed: %d ", v, wid, seq, elapsed)
+	return v, nil
 }
 
 func (f *SnowflakeFactory) NewSnowflake(wid uint32) (*Snowflake, error) {
 	if wid > f.maxWorkerID {
 		return nil, ErrOverMaxWorkerID
 	}
-	return &Snowflake{f: f, worker: wid, mtx: &sync.Mutex{}}, nil
+	log.Printf("worker: %d len_worker: %d len_seq: %d len_ts: %d", wid, f.bitsWorkerID, f.bitsSequence, f.bitsTimestamp)
+	return &Snowflake{f: f, build: f.BuildID2, worker: wid, mtx: &sync.Mutex{}}, nil
 }
 
 func NewSnowflake(worker uint32) (*Snowflake, error) {
@@ -92,6 +107,7 @@ func NewSnowflake(worker uint32) (*Snowflake, error) {
 
 type Snowflake struct {
 	f        *SnowflakeFactory
+	build    func(uint32, uint32, uint64) (uint64, error)
 	worker   uint32
 	elapsed  uint64
 	sequence uint32
@@ -108,7 +124,7 @@ func (s *Snowflake) ID() (uint64, error) {
 	if s.elapsed < elapsed {
 		s.elapsed = elapsed
 		s.sequence = genRandomSequence(9)
-		return s.f.BuildID(s.worker, s.sequence, s.elapsed)
+		return s.build(s.worker, s.sequence, s.elapsed)
 	}
 
 	if s.elapsed > elapsed {
@@ -124,7 +140,7 @@ func (s *Snowflake) ID() (uint64, error) {
 		time.Sleep(s.f.Sleep(time.Duration(s.elapsed - elapsed)))
 	}
 
-	return s.f.BuildID(s.worker, s.sequence, s.elapsed)
+	return s.build(s.worker, s.sequence, s.elapsed)
 }
 
 func genRandomSequence(n int32) uint32 {
