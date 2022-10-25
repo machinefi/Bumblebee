@@ -1,4 +1,5 @@
 .session.vim
+.undodir
 conf/postgres/data
 gen/cmd/toolkit/toolkit
 __examples__/cmd/demo/demo

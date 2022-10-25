@@ -61,6 +61,13 @@ func TestAnalyzeColumnType(t *testing.T) {
 				Type:    typesx.FromReflectType(reflect.TypeOf("")),
 				Default: ptrx.String(`'1'`),
 			},
+		}, {
+			"Rename",
+			`new_name,prev=old_name`,
+			&ColumnType{
+				Type:   typesx.FromReflectType(reflect.TypeOf("")),
+				Rename: ptrx.Ptr([2]string{"old_name", "new_name"}),
+			},
 		},
 	}
 

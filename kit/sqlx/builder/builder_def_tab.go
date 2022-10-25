@@ -136,6 +136,15 @@ func (t *Table) Expr(query string, args ...interface{}) *Ex {
 func (t *Table) Diff(prevT *Table, d Dialect) (exprList []SqlExpr) {
 	// diff columns
 	t.Columns.Range(func(currC *Column, idx int) {
+		if currC.Rename != nil {
+			prevName := (*currC.Rename)[0]
+			if prevC := prevT.Col(prevName); prevC != nil {
+				targetCol := t.Col(currC.Name)
+				exprList = append(exprList, d.RenameColumn(prevC, targetCol))
+				return
+			}
+		}
+
 		if prevC := prevT.Col(currC.Name); prevC != nil {
 			if currC != nil {
 				if currC.DeprecatedActs != nil {

@@ -14,6 +14,7 @@ type ColumnType struct {
 	Decimal        uint64
 	Default        *string
 	OnUpdate       *string
+	Rename         *[2]string
 	Null           bool
 	AutoIncrement  bool
 	Comment        string
@@ -70,6 +71,12 @@ func AnalyzeColumnType(t typesx.Type, tag string) *ColumnType {
 				rename = kv[1]
 			}
 			ct.DeprecatedActs = &DeprecatedActs{RenameTo: rename}
+		case "prev":
+			if len(kv) == 2 {
+				ct.Rename = new([2]string)
+				(*ct.Rename)[0] = kv[1]
+				(*ct.Rename)[1] = strings.Split(tag, ",")[0]
+			}
 		}
 	}
 
