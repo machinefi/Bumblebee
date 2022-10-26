@@ -317,7 +317,9 @@ func (s *SnippetField) Bytes() []byte {
 
 	// type inference
 	if s.Type != nil {
-		buf.WriteRune(' ')
+		if len(s.Names) > 0 {
+			buf.WriteRune(' ')
+		}
 		buf.Write(s.Type.Bytes())
 	}
 
@@ -1061,11 +1063,11 @@ func (f *FuncType) Bytes() []byte {
 		buf.Write(f.Args[i].WithoutTag().Bytes())
 	}
 	buf.WriteByte(')')
+	buf.WriteRune(' ')
 
 	quoteRet := len(f.Rets) > 0 && len(f.Rets[0].Names) > 0 || len(f.Rets) > 1
 
 	if quoteRet {
-		buf.WriteRune(' ')
 		buf.WriteRune('(')
 	}
 
@@ -1079,10 +1081,14 @@ func (f *FuncType) Bytes() []byte {
 
 	if quoteRet {
 		buf.WriteRune(')')
+		buf.WriteRune(' ')
+	} else {
+		if len(f.Rets) > 0 {
+			buf.WriteRune(' ')
+		}
 	}
 
 	if f.Blk != nil {
-		buf.WriteRune(' ')
 		buf.Write(f.Blk.Bytes())
 	}
 	return buf.Bytes()

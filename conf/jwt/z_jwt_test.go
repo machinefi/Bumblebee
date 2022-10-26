@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/golang-jwt/jwt/v4"
+	"github.com/iotexproject/Bumblebee/kit/statusx"
 	. "github.com/onsi/gomega"
 
 	"github.com/iotexproject/Bumblebee/base/types"
@@ -40,8 +40,8 @@ func TestJwt(t *testing.T) {
 
 		_, err = c.ParseToken(token)
 		NewWithT(t).Expect(err).NotTo(BeNil())
-		ve, ok := err.(*jwt.ValidationError)
+		ve, ok := err.(*statusx.StatusErr)
 		NewWithT(t).Expect(ok).To(BeTrue())
-		NewWithT(t).Expect(ve.Errors | jwt.ValidationErrorExpired).To(Equal(jwt.ValidationErrorExpired))
+		NewWithT(t).Expect(ve.Code).To(Equal(InvalidToken.Code()))
 	})
 }

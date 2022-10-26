@@ -21,25 +21,25 @@ func init() {
 type UserIterator struct {
 }
 
-func (UserIterator) New() interface{} {
+func (*UserIterator) New() interface{} {
 	return &User{}
 }
 
-func (UserIterator) Resolve(v interface{}) *User {
+func (*UserIterator) Resolve(v interface{}) *User {
 	return v.(*User)
 }
 
-func (User) TableName() string {
+func (*User) TableName() string {
 	return "t_user"
 }
 
-func (User) TableDesc() []string {
+func (*User) TableDesc() []string {
 	return []string{
 		"User 用户表",
 	}
 }
 
-func (User) Comments() map[string]string {
+func (*User) Comments() map[string]string {
 	return map[string]string{
 		"Name":     "姓名",
 		"Nickname": "昵称",
@@ -48,7 +48,7 @@ func (User) Comments() map[string]string {
 	}
 }
 
-func (User) ColDesc() map[string][]string {
+func (*User) ColDesc() map[string][]string {
 	return map[string][]string{
 		"Name": []string{
 			"姓名",
@@ -66,7 +66,7 @@ func (User) ColDesc() map[string][]string {
 	}
 }
 
-func (User) ColRel() map[string][]string {
+func (*User) ColRel() map[string][]string {
 	return map[string][]string{
 		"OrgID": []string{
 			"Org",
@@ -75,13 +75,13 @@ func (User) ColRel() map[string][]string {
 	}
 }
 
-func (User) PrimaryKey() []string {
+func (*User) PrimaryKey() []string {
 	return []string{
 		"ID",
 	}
 }
 
-func (User) Indexes() builder.Indexes {
+func (*User) Indexes() builder.Indexes {
 	return builder.Indexes{
 		"i_geom/SPATIAL": []string{
 			"(#Geom)",
@@ -104,7 +104,7 @@ func (m *User) IndexFieldNames() []string {
 	}
 }
 
-func (User) UniqueIndexes() builder.Indexes {
+func (*User) UniqueIndexes() builder.Indexes {
 	return builder.Indexes{
 		"ui_id_org": []string{
 			"ID",
@@ -118,11 +118,11 @@ func (User) UniqueIndexes() builder.Indexes {
 	}
 }
 
-func (User) UniqueIndexUiIdOrg() string {
+func (*User) UniqueIndexUIIDOrg() string {
 	return "ui_id_org"
 }
 
-func (User) UniqueIndexUiName() string {
+func (*User) UniqueIndexUIName() string {
 	return "ui_name"
 }
 
@@ -130,7 +130,7 @@ func (m *User) ColID() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldID())
 }
 
-func (User) FieldID() string {
+func (*User) FieldID() string {
 	return "ID"
 }
 
@@ -138,7 +138,7 @@ func (m *User) ColName() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldName())
 }
 
-func (User) FieldName() string {
+func (*User) FieldName() string {
 	return "Name"
 }
 
@@ -146,7 +146,7 @@ func (m *User) ColNickname() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldNickname())
 }
 
-func (User) FieldNickname() string {
+func (*User) FieldNickname() string {
 	return "Nickname"
 }
 
@@ -154,7 +154,7 @@ func (m *User) ColUsername() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldUsername())
 }
 
-func (User) FieldUsername() string {
+func (*User) FieldUsername() string {
 	return "Username"
 }
 
@@ -162,7 +162,7 @@ func (m *User) ColGender() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldGender())
 }
 
-func (User) FieldGender() string {
+func (*User) FieldGender() string {
 	return "Gender"
 }
 
@@ -170,7 +170,7 @@ func (m *User) ColBoolean() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldBoolean())
 }
 
-func (User) FieldBoolean() string {
+func (*User) FieldBoolean() string {
 	return "Boolean"
 }
 
@@ -178,7 +178,7 @@ func (m *User) ColGeom() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldGeom())
 }
 
-func (User) FieldGeom() string {
+func (*User) FieldGeom() string {
 	return "Geom"
 }
 
@@ -186,7 +186,7 @@ func (m *User) ColOrgID() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldOrgID())
 }
 
-func (User) FieldOrgID() string {
+func (*User) FieldOrgID() string {
 	return "OrgID"
 }
 
@@ -194,7 +194,7 @@ func (m *User) ColCreatedAt() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldCreatedAt())
 }
 
-func (User) FieldCreatedAt() string {
+func (*User) FieldCreatedAt() string {
 	return "CreatedAt"
 }
 
@@ -202,7 +202,7 @@ func (m *User) ColUpdatedAt() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldUpdatedAt())
 }
 
-func (User) FieldUpdatedAt() string {
+func (*User) FieldUpdatedAt() string {
 	return "UpdatedAt"
 }
 
@@ -210,7 +210,7 @@ func (m *User) ColDeletedAt() *builder.Column {
 	return UserTable.ColByFieldName(m.FieldDeletedAt())
 }
 
-func (User) FieldDeletedAt() string {
+func (*User) FieldDeletedAt() string {
 	return "DeletedAt"
 }
 
@@ -288,25 +288,6 @@ func (m *User) FetchByID(db sqlx.DBExecutor) error {
 	return err
 }
 
-func (m *User) FetchByName(db sqlx.DBExecutor) error {
-	tbl := db.T(m)
-	err := db.QueryAndScan(
-		builder.Select(nil).
-			From(
-				tbl,
-				builder.Where(
-					builder.And(
-						tbl.ColByFieldName("Name").Eq(m.Name),
-						tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
-					),
-				),
-				builder.Comment("User.FetchByName"),
-			),
-		m,
-	)
-	return err
-}
-
 func (m *User) FetchByIDAndOrgID(db sqlx.DBExecutor) error {
 	tbl := db.T(m)
 	err := db.QueryAndScan(
@@ -321,6 +302,25 @@ func (m *User) FetchByIDAndOrgID(db sqlx.DBExecutor) error {
 					),
 				),
 				builder.Comment("User.FetchByIDAndOrgID"),
+			),
+		m,
+	)
+	return err
+}
+
+func (m *User) FetchByName(db sqlx.DBExecutor) error {
+	tbl := db.T(m)
+	err := db.QueryAndScan(
+		builder.Select(nil).
+			From(
+				tbl,
+				builder.Where(
+					builder.And(
+						tbl.ColByFieldName("Name").Eq(m.Name),
+						tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
+					),
+				),
+				builder.Comment("User.FetchByName"),
 			),
 		m,
 	)
@@ -358,37 +358,6 @@ func (m *User) UpdateByID(db sqlx.DBExecutor, zeros ...string) error {
 	return m.UpdateByIDWithFVs(db, fvs)
 }
 
-func (m *User) UpdateByNameWithFVs(db sqlx.DBExecutor, fvs builder.FieldValues) error {
-
-	if _, ok := fvs["UpdatedAt"]; !ok {
-		fvs["UpdatedAt"] = types.Timestamp{Time: time.Now()}
-	}
-	tbl := db.T(m)
-	res, err := db.Exec(
-		builder.Update(tbl).
-			Where(
-				builder.And(
-					tbl.ColByFieldName("Name").Eq(m.Name),
-					tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
-				),
-				builder.Comment("User.UpdateByNameWithFVs"),
-			).
-			Set(tbl.AssignmentsByFieldValues(fvs)...),
-	)
-	if err != nil {
-		return err
-	}
-	if affected, _ := res.RowsAffected(); affected == 0 {
-		return m.FetchByName(db)
-	}
-	return nil
-}
-
-func (m *User) UpdateByName(db sqlx.DBExecutor, zeros ...string) error {
-	fvs := builder.FieldValueFromStructByNoneZero(m, zeros...)
-	return m.UpdateByNameWithFVs(db, fvs)
-}
-
 func (m *User) UpdateByIDAndOrgIDWithFVs(db sqlx.DBExecutor, fvs builder.FieldValues) error {
 
 	if _, ok := fvs["UpdatedAt"]; !ok {
@@ -419,6 +388,37 @@ func (m *User) UpdateByIDAndOrgIDWithFVs(db sqlx.DBExecutor, fvs builder.FieldVa
 func (m *User) UpdateByIDAndOrgID(db sqlx.DBExecutor, zeros ...string) error {
 	fvs := builder.FieldValueFromStructByNoneZero(m, zeros...)
 	return m.UpdateByIDAndOrgIDWithFVs(db, fvs)
+}
+
+func (m *User) UpdateByNameWithFVs(db sqlx.DBExecutor, fvs builder.FieldValues) error {
+
+	if _, ok := fvs["UpdatedAt"]; !ok {
+		fvs["UpdatedAt"] = types.Timestamp{Time: time.Now()}
+	}
+	tbl := db.T(m)
+	res, err := db.Exec(
+		builder.Update(tbl).
+			Where(
+				builder.And(
+					tbl.ColByFieldName("Name").Eq(m.Name),
+					tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
+				),
+				builder.Comment("User.UpdateByNameWithFVs"),
+			).
+			Set(tbl.AssignmentsByFieldValues(fvs)...),
+	)
+	if err != nil {
+		return err
+	}
+	if affected, _ := res.RowsAffected(); affected == 0 {
+		return m.FetchByName(db)
+	}
+	return nil
+}
+
+func (m *User) UpdateByName(db sqlx.DBExecutor, zeros ...string) error {
+	fvs := builder.FieldValueFromStructByNoneZero(m, zeros...)
+	return m.UpdateByNameWithFVs(db, fvs)
 }
 
 func (m *User) Delete(db sqlx.DBExecutor) error {
@@ -476,49 +476,6 @@ func (m *User) SoftDeleteByID(db sqlx.DBExecutor) error {
 	return err
 }
 
-func (m *User) DeleteByName(db sqlx.DBExecutor) error {
-	tbl := db.T(m)
-	_, err := db.Exec(
-		builder.Delete().
-			From(
-				tbl,
-				builder.Where(
-					builder.And(
-						tbl.ColByFieldName("Name").Eq(m.Name),
-						tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
-					),
-				),
-				builder.Comment("User.DeleteByName"),
-			),
-	)
-	return err
-}
-
-func (m *User) SoftDeleteByName(db sqlx.DBExecutor) error {
-	tbl := db.T(m)
-	fvs := builder.FieldValues{}
-
-	if _, ok := fvs["DeletedAt"]; !ok {
-		fvs["DeletedAt"] = types.Timestamp{Time: time.Now()}
-	}
-
-	if _, ok := fvs["UpdatedAt"]; !ok {
-		fvs["UpdatedAt"] = types.Timestamp{Time: time.Now()}
-	}
-	_, err := db.Exec(
-		builder.Update(db.T(m)).
-			Where(
-				builder.And(
-					tbl.ColByFieldName("Name").Eq(m.Name),
-					tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
-				),
-				builder.Comment("User.SoftDeleteByName"),
-			).
-			Set(tbl.AssignmentsByFieldValues(fvs)...),
-	)
-	return err
-}
-
 func (m *User) DeleteByIDAndOrgID(db sqlx.DBExecutor) error {
 	tbl := db.T(m)
 	_, err := db.Exec(
@@ -558,6 +515,49 @@ func (m *User) SoftDeleteByIDAndOrgID(db sqlx.DBExecutor) error {
 					tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
 				),
 				builder.Comment("User.SoftDeleteByIDAndOrgID"),
+			).
+			Set(tbl.AssignmentsByFieldValues(fvs)...),
+	)
+	return err
+}
+
+func (m *User) DeleteByName(db sqlx.DBExecutor) error {
+	tbl := db.T(m)
+	_, err := db.Exec(
+		builder.Delete().
+			From(
+				tbl,
+				builder.Where(
+					builder.And(
+						tbl.ColByFieldName("Name").Eq(m.Name),
+						tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
+					),
+				),
+				builder.Comment("User.DeleteByName"),
+			),
+	)
+	return err
+}
+
+func (m *User) SoftDeleteByName(db sqlx.DBExecutor) error {
+	tbl := db.T(m)
+	fvs := builder.FieldValues{}
+
+	if _, ok := fvs["DeletedAt"]; !ok {
+		fvs["DeletedAt"] = types.Timestamp{Time: time.Now()}
+	}
+
+	if _, ok := fvs["UpdatedAt"]; !ok {
+		fvs["UpdatedAt"] = types.Timestamp{Time: time.Now()}
+	}
+	_, err := db.Exec(
+		builder.Update(db.T(m)).
+			Where(
+				builder.And(
+					tbl.ColByFieldName("Name").Eq(m.Name),
+					tbl.ColByFieldName("DeletedAt").Eq(m.DeletedAt),
+				),
+				builder.Comment("User.SoftDeleteByName"),
 			).
 			Set(tbl.AssignmentsByFieldValues(fvs)...),
 	)

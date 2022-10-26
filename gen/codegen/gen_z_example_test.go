@@ -25,6 +25,9 @@ func ExampleVar() {
 		WithComments("AliasStringType is a Alias of string")
 	fmt.Println(string(v.Bytes()))
 
+	v = Var(String)
+	fmt.Println(string(v.Bytes()))
+
 	// Output:
 	// a string
 	// // A is a string
@@ -33,6 +36,7 @@ func ExampleVar() {
 	// a string
 	// // AliasStringType is a Alias of string
 	// AliasStringType = string
+	// string
 }
 
 func ExampleType() {
