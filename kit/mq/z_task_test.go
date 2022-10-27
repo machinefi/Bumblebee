@@ -46,7 +46,7 @@ func (t *Task) SetArg(v interface{}) {
 }
 
 var (
-	managers = []mq.TaskManager{mem_mq.New() /*redis_mq.New()*/}
+	managers = []mq.TaskManager{mem_mq.New(10000) /*redis_mq.New()*/}
 	channel  = "cc"
 	router   = kit.NewRouter()
 )

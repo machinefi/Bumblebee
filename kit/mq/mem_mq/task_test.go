@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	tm = mem_mq.New()
+	tm = mem_mq.New(10000)
 	ch = "mm"
 )
 
