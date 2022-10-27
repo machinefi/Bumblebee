@@ -7,13 +7,23 @@ import (
 	"github.com/iotexproject/Bumblebee/kit/mq"
 )
 
-func New() *TaskManager {
-	return &TaskManager{l: list.New(), m: map[string]*list.Element{}}
+func New(limit int) *TaskManager {
+	if limit == 0 {
+		limit = 256
+	}
+	return &TaskManager{
+		l:   list.New(),
+		m:   map[string]*list.Element{},
+		lmt: limit,
+		sig: make(chan struct{}, limit),
+	}
 }
 
 type TaskManager struct {
-	m map[string]*list.Element
-	l *list.List
+	m   map[string]*list.Element
+	l   *list.List
+	lmt int
+	sig chan struct{}
 
 	rwm sync.RWMutex
 }
@@ -25,10 +35,13 @@ func (tm *TaskManager) Push(ch string, t mq.Task) error {
 	defer tm.rwm.Unlock()
 
 	tm.m[key(ch, t.ID())] = tm.l.PushBack(t)
+	tm.sig <- struct{}{}
 	return nil
 }
 
 func (tm *TaskManager) Pop(ch string) (mq.Task, error) {
+	<-tm.sig
+
 	tm.rwm.Lock()
 	defer tm.rwm.Unlock()
 
@@ -58,7 +71,7 @@ func (tm *TaskManager) Remove(ch string, id string) error {
 }
 
 func (tm *TaskManager) Clear(_ string) error {
-	*tm = *New()
+	*tm = *New(tm.lmt)
 	return nil
 }
 
