@@ -94,7 +94,7 @@ func (f *SnowflakeFactory) BuildID2(wid, seq uint32, elapsed uint64) (uint64, er
 
 func (f *SnowflakeFactory) NewSnowflake(wid uint32) (*Snowflake, error) {
 	if wid > f.maxWorkerID {
-		return nil, ErrOverMaxWorkerID
+		wid = f.maxWorkerID
 	}
 	log.Printf("worker: %d len_worker: %d len_seq: %d len_ts: %d", wid, f.bitsWorkerID, f.bitsSequence, f.bitsTimestamp)
 	return &Snowflake{f: f, build: f.BuildID2, worker: wid, mtx: &sync.Mutex{}}, nil
