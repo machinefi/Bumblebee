@@ -4,7 +4,7 @@
 package strfmt
 
 import (
-	"github.com/iotexproject/Bumblebee/kit/validator"
+	"github.com/machinefi/Bumblebee/kit/validator"
 )
 
 func init() {

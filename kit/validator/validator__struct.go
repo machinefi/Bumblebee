@@ -5,9 +5,9 @@ import (
 	"go/ast"
 	"reflect"
 
-	"github.com/iotexproject/Bumblebee/kit/validator/errors"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 func NewStructValidator(tagKey string) *Struct {

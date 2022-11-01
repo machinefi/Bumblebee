@@ -4,7 +4,7 @@ import (
 	"container/list"
 	"sync"
 
-	"github.com/iotexproject/Bumblebee/kit/mq"
+	"github.com/machinefi/Bumblebee/kit/mq"
 )
 
 func New(limit int) *TaskManager {

@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"regexp"
 
-	"github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/kit/validator/errors"
 )
 
 type ValidateFunc func(interface{}) error

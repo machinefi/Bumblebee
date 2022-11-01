@@ -9,8 +9,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/sdk/trace"
 
-	"github.com/iotexproject/Bumblebee/base/consts"
-	"github.com/iotexproject/Bumblebee/kit/metax"
+	"github.com/machinefi/Bumblebee/base/consts"
+	"github.com/machinefi/Bumblebee/kit/metax"
 )
 
 type Log struct {

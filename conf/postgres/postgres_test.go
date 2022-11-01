@@ -6,8 +6,8 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/conf/postgres"
-	"github.com/iotexproject/Bumblebee/testutil/postgrestestutil"
+	"github.com/machinefi/Bumblebee/conf/postgres"
+	"github.com/machinefi/Bumblebee/testutil/postgrestestutil"
 )
 
 func TestPostgres(t *testing.T) {

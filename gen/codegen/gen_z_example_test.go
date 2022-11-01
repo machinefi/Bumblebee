@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"runtime"
 
-	. "github.com/iotexproject/Bumblebee/gen/codegen"
+	. "github.com/machinefi/Bumblebee/gen/codegen"
 )
 
 func ExampleVar() {

@@ -3,7 +3,7 @@ package scanner
 import (
 	"reflect"
 
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 type ScanIterator interface {

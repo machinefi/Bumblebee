@@ -10,7 +10,7 @@ import (
 
 	"github.com/saitofun/qlib/util/qnaming"
 
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 type Scanner struct {

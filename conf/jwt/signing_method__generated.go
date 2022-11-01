@@ -8,7 +8,7 @@ import (
 	"database/sql/driver"
 	"errors"
 
-	"github.com/iotexproject/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/enum"
 )
 
 var InvalidSigningMethod = errors.New("invalid SigningMethod type")
@@ -150,7 +150,7 @@ func (v SigningMethod) Label() string {
 }
 
 func (v SigningMethod) TypeName() string {
-	return "github.com/iotexproject/Bumblebee/conf/jwt.SigningMethod"
+	return "github.com/machinefi/Bumblebee/conf/jwt.SigningMethod"
 }
 
 func (v SigningMethod) ConstValues() []enum.IntStringerEnum {

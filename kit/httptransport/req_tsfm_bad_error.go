@@ -5,8 +5,8 @@ import (
 
 	pkgerr "github.com/pkg/errors"
 
-	"github.com/iotexproject/Bumblebee/kit/statusx"
-	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/kit/statusx"
+	vldterr "github.com/machinefi/Bumblebee/kit/validator/errors"
 )
 
 type BadRequestError interface {

@@ -1,8 +1,8 @@
 package datatypes
 
 import (
-	"github.com/iotexproject/Bumblebee/base/types"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
 )
 
 type OperationTimes struct {

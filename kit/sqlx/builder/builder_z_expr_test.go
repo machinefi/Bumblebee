@@ -6,9 +6,9 @@ import (
 
 	g "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/testutil/buildertestutil"
+	. "github.com/machinefi/Bumblebee/testutil/buildertestutil"
 
-	. "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	. "github.com/machinefi/Bumblebee/kit/sqlx/builder"
 )
 
 func TestResolveExpr(t *testing.T) {

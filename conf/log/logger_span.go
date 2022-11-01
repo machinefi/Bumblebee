@@ -11,8 +11,8 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/iotexproject/Bumblebee/kit/metax"
-	"github.com/iotexproject/Bumblebee/x/ptrx"
+	"github.com/machinefi/Bumblebee/kit/metax"
+	"github.com/machinefi/Bumblebee/x/ptrx"
 )
 
 func Span(tracer string, s trace.Span) Logger {

@@ -6,9 +6,9 @@ import (
 
 	g "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
-	"github.com/iotexproject/Bumblebee/x/ptrx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	. "github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/x/ptrx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 func TestAnalyzeColumnType(t *testing.T) {

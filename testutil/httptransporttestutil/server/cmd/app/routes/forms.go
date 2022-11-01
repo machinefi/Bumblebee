@@ -4,10 +4,10 @@ import (
 	"context"
 	"mime/multipart"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/kit"
-	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/pkg/types"
+	"github.com/machinefi/Bumblebee/kit/httptransport"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/testutil/httptransporttestutil/server/pkg/types"
 )
 
 var FormsRouter = kit.NewRouter(httptransport.Group("/forms"))

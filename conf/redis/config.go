@@ -5,7 +5,7 @@ import (
 
 	"github.com/gomodule/redigo/redis"
 
-	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/base/types"
 )
 
 type Config struct {

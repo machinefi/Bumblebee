@@ -8,8 +8,8 @@ import (
 	"github.com/fatih/color"
 	"github.com/julienschmidt/httprouter"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/kit"
 )
 
 type MethodDescriber interface {

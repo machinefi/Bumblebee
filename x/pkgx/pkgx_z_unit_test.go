@@ -16,8 +16,8 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/x/misc/must"
-	. "github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/x/misc/must"
+	. "github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 func TestImportPathAndExpose(t *testing.T) {

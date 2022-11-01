@@ -7,7 +7,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
+	. "github.com/machinefi/Bumblebee/kit/httptransport/transformer"
 )
 
 func BenchmarkBuffers(b *testing.B) {

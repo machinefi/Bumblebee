@@ -5,9 +5,9 @@ import (
 	"runtime"
 	"sort"
 
-	g "github.com/iotexproject/Bumblebee/gen/codegen"
-	"github.com/iotexproject/Bumblebee/x/misc/must"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	g "github.com/machinefi/Bumblebee/gen/codegen"
+	"github.com/machinefi/Bumblebee/x/misc/must"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types

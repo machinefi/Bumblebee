@@ -6,7 +6,7 @@ import (
 
 	g "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	. "github.com/machinefi/Bumblebee/kit/sqlx/builder"
 )
 
 func TestFieldValueFromStruct(t *testing.T) {

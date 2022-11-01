@@ -6,11 +6,11 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/iotexproject/Bumblebee/conf/http/mws"
-	"github.com/iotexproject/Bumblebee/kit/httptransport"
-	"github.com/iotexproject/Bumblebee/kit/kit"
-	"github.com/iotexproject/Bumblebee/x/contextx"
-	"github.com/iotexproject/Bumblebee/x/ptrx"
+	"github.com/machinefi/Bumblebee/conf/http/mws"
+	"github.com/machinefi/Bumblebee/kit/httptransport"
+	"github.com/machinefi/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/x/contextx"
+	"github.com/machinefi/Bumblebee/x/ptrx"
 )
 
 var middlewares []httptransport.HttpMiddleware

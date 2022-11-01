@@ -6,8 +6,8 @@ import (
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/base/types"
-	. "github.com/iotexproject/Bumblebee/conf/mqtt"
+	"github.com/machinefi/Bumblebee/base/types"
+	. "github.com/machinefi/Bumblebee/conf/mqtt"
 )
 
 func TestBroker(t *testing.T) {

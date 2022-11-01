@@ -1,6 +1,6 @@
 package datatypes
 
-import "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+import "github.com/machinefi/Bumblebee/kit/sqlx/builder"
 
 type Pager struct {
 	Size   int64 `name:"size,omitempty"   in:"query" default:"10" validate:"@int64[-1,]"`

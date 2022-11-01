@@ -8,7 +8,7 @@ import (
 
 	"github.com/saitofun/qlib/util/qnaming"
 
-	g "github.com/iotexproject/Bumblebee/gen/codegen"
+	g "github.com/machinefi/Bumblebee/gen/codegen"
 )
 
 func main() {
@@ -53,4 +53,4 @@ func main() {
 	_, _ = file.Write()
 }
 
-var pkg = "github.com/iotexproject/Bumblebee/kit/validator"
+var pkg = "github.com/machinefi/Bumblebee/kit/validator"

@@ -6,11 +6,11 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/iotexproject/Bumblebee/kit/kit"
-	"github.com/iotexproject/Bumblebee/kit/metax"
-	"github.com/iotexproject/Bumblebee/kit/mq/worker"
-	"github.com/iotexproject/Bumblebee/x/contextx"
-	"github.com/iotexproject/Bumblebee/x/mapx"
+	"github.com/machinefi/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/kit/metax"
+	"github.com/machinefi/Bumblebee/kit/mq/worker"
+	"github.com/machinefi/Bumblebee/x/contextx"
+	"github.com/machinefi/Bumblebee/x/mapx"
 	"github.com/pkg/errors"
 )
 

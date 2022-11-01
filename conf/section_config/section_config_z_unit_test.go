@@ -8,9 +8,9 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/base/cmd"
-	"github.com/iotexproject/Bumblebee/base/types"
-	. "github.com/iotexproject/Bumblebee/conf/section_config"
+	"github.com/machinefi/Bumblebee/base/cmd"
+	"github.com/machinefi/Bumblebee/base/types"
+	. "github.com/machinefi/Bumblebee/conf/section_config"
 )
 
 type Config struct {

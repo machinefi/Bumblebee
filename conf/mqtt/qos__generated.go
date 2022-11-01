@@ -8,7 +8,7 @@ import (
 	"database/sql/driver"
 	"errors"
 
-	"github.com/iotexproject/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/enum"
 )
 
 var InvalidQOS = errors.New("invalid QOS type")
@@ -78,7 +78,7 @@ func (v QOS) Label() string {
 }
 
 func (v QOS) TypeName() string {
-	return "github.com/iotexproject/Bumblebee/conf/mqtt.QOS"
+	return "github.com/machinefi/Bumblebee/conf/mqtt.QOS"
 }
 
 func (v QOS) ConstValues() []enum.IntStringerEnum {

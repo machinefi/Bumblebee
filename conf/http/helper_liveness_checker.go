@@ -4,9 +4,9 @@ import (
 	"context"
 	"reflect"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/kit"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 type LivenessChecker interface {

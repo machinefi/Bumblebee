@@ -5,7 +5,7 @@ import (
 	"regexp"
 	textscanner "text/scanner"
 
-	"github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/kit/validator/errors"
 )
 
 type scanner struct {

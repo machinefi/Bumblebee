@@ -3,7 +3,7 @@ package main
 import (
 	"strings"
 
-	"github.com/iotexproject/Bumblebee/x/pkgx/__tests__/sub"
+	"github.com/machinefi/Bumblebee/x/pkgx/__tests__/sub"
 )
 
 func Example() {

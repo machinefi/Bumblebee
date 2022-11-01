@@ -6,7 +6,7 @@ import (
 	"database/sql/driver"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
 )
 
 type DBExecutor interface {

@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/kit/kit"
-	"github.com/iotexproject/Bumblebee/kit/metax"
-	"github.com/iotexproject/Bumblebee/kit/mq"
-	"github.com/iotexproject/Bumblebee/kit/mq/mem_mq"
+	"github.com/machinefi/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/kit/metax"
+	"github.com/machinefi/Bumblebee/kit/mq"
+	"github.com/machinefi/Bumblebee/kit/mq/mem_mq"
 	. "github.com/onsi/gomega"
 )
 

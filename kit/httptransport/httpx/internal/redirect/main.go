@@ -10,9 +10,9 @@ import (
 	"runtime"
 	"strconv"
 
-	g "github.com/iotexproject/Bumblebee/gen/codegen"
-	"github.com/iotexproject/Bumblebee/x/misc/must"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	g "github.com/machinefi/Bumblebee/gen/codegen"
+	"github.com/machinefi/Bumblebee/x/misc/must"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 func main() {

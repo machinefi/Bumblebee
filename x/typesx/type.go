@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 type Type interface {

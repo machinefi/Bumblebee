@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/iotexproject/Bumblebee/kit/statusx"
+	"github.com/machinefi/Bumblebee/kit/statusx"
 )
 
 func NewErrorSetWithRoot(root string) *ErrorSet { return &ErrorSet{root: root} }

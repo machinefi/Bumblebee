@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/client"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/kit/httptransport"
+	"github.com/machinefi/Bumblebee/kit/httptransport/client"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/kit"
 )
 
 var ProxyRouter = kit.NewRouter(httptransport.Group("/proxy"))

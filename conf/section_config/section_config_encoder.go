@@ -8,8 +8,8 @@ import (
 
 	"github.com/saitofun/qlib/encoding/qtext"
 
-	"github.com/iotexproject/Bumblebee/base/types"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 type Encoder struct {

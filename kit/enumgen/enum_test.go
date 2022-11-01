@@ -8,9 +8,9 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/gen/codegen"
-	"github.com/iotexproject/Bumblebee/kit/enumgen"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/gen/codegen"
+	"github.com/machinefi/Bumblebee/kit/enumgen"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 var (

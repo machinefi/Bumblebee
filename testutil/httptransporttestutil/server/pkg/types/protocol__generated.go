@@ -10,7 +10,7 @@ import (
 	"database/sql/driver"
 	"errors"
 
-	"github.com/iotexproject/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/enum"
 )
 
 var InvalidProtocol = errors.New("invalid Protocol type")
@@ -80,7 +80,7 @@ func (v Protocol) Label() string {
 }
 
 func (v Protocol) TypeName() string {
-	return "github.com/iotexproject/Bumblebee/kit/httptransport/testdata/server/pkg/types.Protocol"
+	return "github.com/machinefi/Bumblebee/kit/httptransport/testdata/server/pkg/types.Protocol"
 }
 
 func (v Protocol) ConstValues() []enum.IntStringerEnum {

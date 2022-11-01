@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"unicode"
 
-	"github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/kit/validator/errors"
 )
 
 func MinInt(bits uint) int64 { return -(1 << (bits - 1)) }

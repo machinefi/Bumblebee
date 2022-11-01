@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/conf/log"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/mock"
+	"github.com/machinefi/Bumblebee/conf/log"
+	"github.com/machinefi/Bumblebee/kit/httptransport/mock"
 )
 
 func ExampleLogHandler() {

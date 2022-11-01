@@ -8,7 +8,7 @@ import (
 	"database/sql/driver"
 	"errors"
 
-	"github.com/iotexproject/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/enum"
 )
 
 var InvalidSample = errors.New("invalid Sample type")
@@ -78,7 +78,7 @@ func (v Sample) Label() string {
 }
 
 func (v Sample) TypeName() string {
-	return "github.com/iotexproject/Bumblebee/kit/enumgen/__examples__.Sample"
+	return "github.com/machinefi/Bumblebee/kit/enumgen/__examples__.Sample"
 }
 
 func (v Sample) ConstValues() []enum.IntStringerEnum {

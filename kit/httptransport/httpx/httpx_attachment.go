@@ -3,7 +3,7 @@ package httpx
 import (
 	"bytes"
 
-	"github.com/iotexproject/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/kit/kit"
 )
 
 func NewAttachment(filename string, contentType string) *Attachment {

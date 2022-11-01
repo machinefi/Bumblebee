@@ -5,7 +5,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/enum"
 )
 
 func TestScanEnum(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/base/types"
 )
 
 type Retry struct {

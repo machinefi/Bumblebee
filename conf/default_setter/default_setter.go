@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 func Set(dft, tar interface{}) error {

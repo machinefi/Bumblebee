@@ -11,7 +11,7 @@ import (
 
 	"github.com/saitofun/qlib/encoding/qtext"
 
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 type Endpoint struct {

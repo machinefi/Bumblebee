@@ -8,11 +8,11 @@ import (
 
 	"github.com/saitofun/qlib/encoding/qtext"
 
-	"github.com/iotexproject/Bumblebee/kit/validator/errors"
-	"github.com/iotexproject/Bumblebee/kit/validator/rules"
-	"github.com/iotexproject/Bumblebee/x/contextx"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/kit/validator/rules"
+	"github.com/machinefi/Bumblebee/x/contextx"
+	"github.com/machinefi/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 // Validator can validate input value

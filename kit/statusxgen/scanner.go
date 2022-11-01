@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/iotexproject/Bumblebee/kit/statusx"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/statusx"
+	"github.com/machinefi/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 func NewScanner(pkg *pkgx.Pkg) *Scanner {

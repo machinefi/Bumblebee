@@ -7,8 +7,8 @@ import (
 
 	pkgerr "github.com/pkg/errors"
 
-	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	vldterr "github.com/machinefi/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 func NewSuper(tsfm Transformer, opt *CommonOption) *Super {

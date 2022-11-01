@@ -3,7 +3,7 @@ package example
 import (
 	"database/sql/driver"
 
-	"github.com/iotexproject/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/base/types"
 )
 
 // @def primary ID

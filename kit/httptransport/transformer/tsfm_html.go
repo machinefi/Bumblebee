@@ -8,8 +8,8 @@ import (
 
 	"github.com/saitofun/qlib/encoding/qtext"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 const HTMLTsfName = "text/html"

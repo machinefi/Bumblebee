@@ -1,10 +1,10 @@
 package migration
 
 import (
-	"github.com/iotexproject/Bumblebee/kit/enum"
-	"github.com/iotexproject/Bumblebee/kit/sqlx"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/sqlx"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 type SqlMetaEnum struct {

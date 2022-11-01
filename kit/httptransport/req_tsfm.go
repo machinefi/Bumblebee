@@ -14,13 +14,13 @@ import (
 	"github.com/julienschmidt/httprouter"
 	pkgerr "github.com/pkg/errors"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
-	"github.com/iotexproject/Bumblebee/kit/statusx"
-	"github.com/iotexproject/Bumblebee/kit/validator"
-	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
-	"github.com/iotexproject/Bumblebee/x/contextx"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/transformer"
+	"github.com/machinefi/Bumblebee/kit/statusx"
+	"github.com/machinefi/Bumblebee/kit/validator"
+	vldterr "github.com/machinefi/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/x/contextx"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 type RequestTsfm struct {

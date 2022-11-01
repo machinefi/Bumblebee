@@ -7,12 +7,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
-	"github.com/iotexproject/Bumblebee/kit/metax"
-	"github.com/iotexproject/Bumblebee/kit/statusx"
-	"github.com/iotexproject/Bumblebee/x/contextx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/transformer"
+	"github.com/machinefi/Bumblebee/kit/metax"
+	"github.com/machinefi/Bumblebee/kit/statusx"
+	"github.com/machinefi/Bumblebee/x/contextx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 type RouteHandler struct {

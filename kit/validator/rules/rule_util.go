@@ -3,7 +3,7 @@ package rules
 import (
 	"bytes"
 
-	"github.com/iotexproject/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/kit/validator/errors"
 )
 
 func Slash(data []byte) []byte {

@@ -5,7 +5,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/kit/validator/rules"
+	"github.com/machinefi/Bumblebee/kit/validator/rules"
 )
 
 func TestSlashAndUnSlash(t *testing.T) {

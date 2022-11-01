@@ -5,8 +5,8 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/conf/default_setter"
-	"github.com/iotexproject/Bumblebee/x/ptrx"
+	"github.com/machinefi/Bumblebee/conf/default_setter"
+	"github.com/machinefi/Bumblebee/x/ptrx"
 )
 
 func TestStruct(t *testing.T) {

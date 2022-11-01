@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/textproto"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
 )
 
 func MIMEHeader(headers ...textproto.MIMEHeader) textproto.MIMEHeader {

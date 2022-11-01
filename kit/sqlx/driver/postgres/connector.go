@@ -12,10 +12,10 @@ import (
 
 	"github.com/lib/pq"
 
-	"github.com/iotexproject/Bumblebee/kit/sqlx"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/migration"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/sqlx"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/kit/sqlx/migration"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 var _ interface {

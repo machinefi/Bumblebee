@@ -10,7 +10,7 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/sdk/trace"
 
-	"github.com/iotexproject/Bumblebee/kit/metax"
+	"github.com/machinefi/Bumblebee/kit/metax"
 )
 
 type (

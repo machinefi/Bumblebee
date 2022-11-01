@@ -5,9 +5,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/iotexproject/Bumblebee/gen/codegen"
-	. "github.com/iotexproject/Bumblebee/kit/modelgen"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/gen/codegen"
+	. "github.com/machinefi/Bumblebee/kit/modelgen"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 var (

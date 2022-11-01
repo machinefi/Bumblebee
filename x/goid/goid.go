@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/iotexproject/Bumblebee/kit/metax"
+	"github.com/machinefi/Bumblebee/kit/metax"
 )
 
 var Default = &Meta{}

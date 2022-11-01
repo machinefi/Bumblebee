@@ -11,11 +11,11 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/base/types"
-	"github.com/iotexproject/Bumblebee/conf/log"
-	"github.com/iotexproject/Bumblebee/kit/httptransport"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/conf/log"
+	"github.com/machinefi/Bumblebee/kit/httptransport"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/kit"
 )
 
 type GetSome struct {

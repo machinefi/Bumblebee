@@ -7,7 +7,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/base/types"
+	. "github.com/machinefi/Bumblebee/base/types"
 )
 
 func TestAddress(t *testing.T) {

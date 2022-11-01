@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"unicode"
 
-	"github.com/iotexproject/Bumblebee/kit/validator/errors"
-	"github.com/iotexproject/Bumblebee/x/ptrx"
+	"github.com/machinefi/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/x/ptrx"
 )
 
 func MaxUint(bits uint) uint64 { return 1<<bits - 1 }

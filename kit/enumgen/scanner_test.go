@@ -7,8 +7,8 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/kit/enumgen"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/kit/enumgen"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 func TestScanner(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"testing"
 	_ "unsafe"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
+	"github.com/machinefi/Bumblebee/kit/httptransport/transformer"
 )
 
 var (

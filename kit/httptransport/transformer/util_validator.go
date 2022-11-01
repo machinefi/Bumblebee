@@ -3,9 +3,9 @@ package transformer
 import (
 	"context"
 
-	"github.com/iotexproject/Bumblebee/kit/validator"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/validator"
+	"github.com/machinefi/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 type MayValidator interface {

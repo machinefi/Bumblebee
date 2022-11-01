@@ -10,8 +10,8 @@ import (
 	"go.opentelemetry.io/otel/exporters/zipkin"
 	"go.opentelemetry.io/otel/trace"
 
-	. "github.com/iotexproject/Bumblebee/conf/log"
-	"github.com/iotexproject/Bumblebee/kit/metax"
+	. "github.com/machinefi/Bumblebee/conf/log"
+	"github.com/machinefi/Bumblebee/kit/metax"
 )
 
 func ExampleLogger() {

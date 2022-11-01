@@ -10,9 +10,9 @@ import (
 	"github.com/lib/pq"
 	"github.com/pkg/errors"
 
-	"github.com/iotexproject/Bumblebee/conf/log"
-	"github.com/iotexproject/Bumblebee/kit/sqlx"
-	"github.com/iotexproject/Bumblebee/x/misc/timer"
+	"github.com/machinefi/Bumblebee/conf/log"
+	"github.com/machinefi/Bumblebee/kit/sqlx"
+	"github.com/machinefi/Bumblebee/x/misc/timer"
 )
 
 type Driver struct {

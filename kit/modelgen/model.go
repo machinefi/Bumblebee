@@ -11,11 +11,11 @@ import (
 
 	"github.com/saitofun/qlib/util/qnaming"
 
-	g "github.com/iotexproject/Bumblebee/gen/codegen"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
-	"github.com/iotexproject/Bumblebee/x/mapx"
-	"github.com/iotexproject/Bumblebee/x/misc/must"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	g "github.com/machinefi/Bumblebee/gen/codegen"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/x/mapx"
+	"github.com/machinefi/Bumblebee/x/misc/must"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 func NewModel(pkg *pkgx.Pkg, tn *types.TypeName, doc string, cfg *Config) *Model {
@@ -782,8 +782,8 @@ func (m *Model) WriteTo(f *g.File) {
 }
 
 var (
-	BuilderPkg = "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
-	SQLxPkg    = "github.com/iotexproject/Bumblebee/kit/sqlx"
+	BuilderPkg = "github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	SQLxPkg    = "github.com/machinefi/Bumblebee/kit/sqlx"
 )
 
 func init() {

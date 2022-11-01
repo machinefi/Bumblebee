@@ -11,12 +11,12 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/testutil/typesxtestutil/typ"
-	typ2 "github.com/iotexproject/Bumblebee/testutil/typesxtestutil/typ/typ"
-	"github.com/iotexproject/Bumblebee/x/misc/must"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
-	"github.com/iotexproject/Bumblebee/x/ptrx"
-	. "github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/testutil/typesxtestutil/typ"
+	typ2 "github.com/machinefi/Bumblebee/testutil/typesxtestutil/typ/typ"
+	"github.com/machinefi/Bumblebee/x/misc/must"
+	"github.com/machinefi/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/x/ptrx"
+	. "github.com/machinefi/Bumblebee/x/typesx"
 )
 
 var pkgid string

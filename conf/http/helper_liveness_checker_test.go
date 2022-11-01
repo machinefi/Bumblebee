@@ -6,7 +6,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/conf/http"
+	. "github.com/machinefi/Bumblebee/conf/http"
 )
 
 type SomeChecker struct{}

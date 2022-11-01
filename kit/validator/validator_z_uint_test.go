@@ -7,8 +7,8 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/kit/validator"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	. "github.com/machinefi/Bumblebee/kit/validator"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 func TestUint_New(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/iotexproject/Bumblebee/conf/log"
+	"github.com/machinefi/Bumblebee/conf/log"
 )
 
 type Task func(db DBExecutor) error

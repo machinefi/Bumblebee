@@ -3,7 +3,7 @@ package ptrx_test
 import (
 	"fmt"
 
-	"github.com/iotexproject/Bumblebee/x/ptrx"
+	"github.com/machinefi/Bumblebee/x/ptrx"
 )
 
 func Example() {

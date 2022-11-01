@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/x/misc/timer"
+	"github.com/machinefi/Bumblebee/x/misc/timer"
 )
 
 func TestStartSpan(t *testing.T) {

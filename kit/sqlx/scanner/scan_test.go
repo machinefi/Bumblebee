@@ -7,7 +7,7 @@ import (
 	"github.com/DATA-DOG/go-sqlmock"
 	"github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/kit/sqlx/scanner"
+	. "github.com/machinefi/Bumblebee/kit/sqlx/scanner"
 )
 
 type T struct {

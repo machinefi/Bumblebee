@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 type SyntaxError struct{ msg string }

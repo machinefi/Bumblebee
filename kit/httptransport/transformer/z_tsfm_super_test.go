@@ -3,7 +3,7 @@ package transformer_test
 import (
 	"testing"
 
-	. "github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
+	. "github.com/machinefi/Bumblebee/kit/httptransport/transformer"
 )
 
 func BenchmarkTransformerSuper(b *testing.B) {

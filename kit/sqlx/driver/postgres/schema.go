@@ -5,9 +5,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/iotexproject/Bumblebee/kit/sqlx"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
-	"github.com/iotexproject/Bumblebee/x/misc/slice"
+	"github.com/machinefi/Bumblebee/kit/sqlx"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/x/misc/slice"
 )
 
 var regexpUsing = regexp.MustCompile(`USING ([^ ]+)`)

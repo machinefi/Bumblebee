@@ -9,8 +9,8 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/base/types/snowflake_id"
-	"github.com/iotexproject/Bumblebee/x/mapx"
+	. "github.com/machinefi/Bumblebee/base/types/snowflake_id"
+	"github.com/machinefi/Bumblebee/x/mapx"
 )
 
 func TestWorkerIDFromIP(t *testing.T) {

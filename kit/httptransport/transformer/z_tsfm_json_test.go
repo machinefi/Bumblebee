@@ -10,11 +10,11 @@ import (
 	. "github.com/onsi/gomega"
 	"github.com/pkg/errors"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
 
-	. "github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
-	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	. "github.com/machinefi/Bumblebee/kit/httptransport/transformer"
+	vldterr "github.com/machinefi/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 type S string

@@ -6,9 +6,9 @@ import (
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 
-	"github.com/iotexproject/Bumblebee/base/types"
-	"github.com/iotexproject/Bumblebee/x/mapx"
-	"github.com/iotexproject/Bumblebee/x/misc/retry"
+	"github.com/machinefi/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/x/mapx"
+	"github.com/machinefi/Bumblebee/x/misc/retry"
 )
 
 type Broker struct {

@@ -7,11 +7,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/iotexproject/Bumblebee/x/contextx"
-	"github.com/iotexproject/Bumblebee/x/misc/clone"
-	"github.com/iotexproject/Bumblebee/x/misc/must"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/x/contextx"
+	"github.com/machinefi/Bumblebee/x/misc/clone"
+	"github.com/machinefi/Bumblebee/x/misc/must"
+	"github.com/machinefi/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 type FieldValues map[string]interface{}

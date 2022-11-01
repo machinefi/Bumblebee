@@ -1,8 +1,8 @@
 package id
 
 import (
-	"github.com/iotexproject/Bumblebee/base/types"
-	"github.com/iotexproject/Bumblebee/base/types/snowflake_id"
+	"github.com/machinefi/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/base/types/snowflake_id"
 )
 
 func NewSFIDGenerator() (SFIDGenerator, error) {

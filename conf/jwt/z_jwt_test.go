@@ -4,11 +4,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/kit/statusx"
+	"github.com/machinefi/Bumblebee/kit/statusx"
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/base/types"
-	. "github.com/iotexproject/Bumblebee/conf/jwt"
+	"github.com/machinefi/Bumblebee/base/types"
+	. "github.com/machinefi/Bumblebee/conf/jwt"
 )
 
 func TestJwt(t *testing.T) {

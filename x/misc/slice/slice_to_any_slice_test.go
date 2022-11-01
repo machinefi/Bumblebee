@@ -5,7 +5,7 @@ import (
 
 	"github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/x/misc/slice"
+	"github.com/machinefi/Bumblebee/x/misc/slice"
 )
 
 func TestToAnySlice(t *testing.T) {

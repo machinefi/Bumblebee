@@ -17,13 +17,13 @@ import (
 	. "github.com/onsi/gomega"
 	pkgerr "github.com/pkg/errors"
 
-	. "github.com/iotexproject/Bumblebee/kit/httptransport"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
-	"github.com/iotexproject/Bumblebee/kit/statusx"
-	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
-	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/pkg/types"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	. "github.com/machinefi/Bumblebee/kit/httptransport"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/transformer"
+	"github.com/machinefi/Bumblebee/kit/statusx"
+	vldterr "github.com/machinefi/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/testutil/httptransporttestutil/server/pkg/types"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 var regexpContentTypeWithBoundary = regexp.MustCompile(`Content-Type: multipart/form-data; boundary=([A-Za-z0-9]+)`)

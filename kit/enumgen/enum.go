@@ -7,9 +7,9 @@ import (
 
 	"github.com/saitofun/qlib/util/qnaming"
 
-	. "github.com/iotexproject/Bumblebee/gen/codegen"
-	"github.com/iotexproject/Bumblebee/x/misc/must"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	. "github.com/machinefi/Bumblebee/gen/codegen"
+	"github.com/machinefi/Bumblebee/x/misc/must"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 type Enum struct {

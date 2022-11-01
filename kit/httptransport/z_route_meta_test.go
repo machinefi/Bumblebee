@@ -7,10 +7,10 @@ import (
 
 	"github.com/fatih/color"
 
-	"github.com/iotexproject/Bumblebee/base/consts"
+	"github.com/machinefi/Bumblebee/base/consts"
 
-	. "github.com/iotexproject/Bumblebee/kit/httptransport"
-	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/cmd/app/routes"
+	. "github.com/machinefi/Bumblebee/kit/httptransport"
+	"github.com/machinefi/Bumblebee/testutil/httptransporttestutil/server/cmd/app/routes"
 )
 
 func ExampleGroup() {

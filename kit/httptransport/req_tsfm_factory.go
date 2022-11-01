@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
-	"github.com/iotexproject/Bumblebee/kit/validator"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/transformer"
+	"github.com/machinefi/Bumblebee/kit/validator"
+	"github.com/machinefi/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 type RequestTsfmFactory struct {

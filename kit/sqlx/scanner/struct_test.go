@@ -7,9 +7,9 @@ import (
 
 	"github.com/DATA-DOG/go-sqlmock"
 
-	"github.com/iotexproject/Bumblebee/kit/sqlx/scanner"
+	"github.com/machinefi/Bumblebee/kit/sqlx/scanner"
 
-	"github.com/iotexproject/Bumblebee/kit/sqlx/scanner/nullable"
+	"github.com/machinefi/Bumblebee/kit/sqlx/scanner/nullable"
 )
 
 func BenchmarkScanStruct(b *testing.B) {

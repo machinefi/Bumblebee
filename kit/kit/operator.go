@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"reflect"
 
-	"github.com/iotexproject/Bumblebee/base/types"
-	"github.com/iotexproject/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 func NewOperatorFactory(op Operator, last bool) *OperatorFactory {

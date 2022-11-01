@@ -5,11 +5,11 @@ import (
 
 	pkgerr "github.com/pkg/errors"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport"
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/kit"
-	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/pkg/errors"
-	"github.com/iotexproject/Bumblebee/testutil/httptransporttestutil/server/pkg/types"
+	"github.com/machinefi/Bumblebee/kit/httptransport"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/testutil/httptransporttestutil/server/pkg/errors"
+	"github.com/machinefi/Bumblebee/testutil/httptransporttestutil/server/pkg/types"
 )
 
 var RestfulRouter = kit.NewRouter(httptransport.Group("/restful"))

@@ -8,7 +8,7 @@ import (
 	"database/sql/driver"
 	"errors"
 
-	"github.com/iotexproject/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/enum"
 )
 
 var InvalidScheme = errors.New("invalid Scheme type")
@@ -94,7 +94,7 @@ func (v Scheme) Label() string {
 }
 
 func (v Scheme) TypeName() string {
-	return "github.com/iotexproject/Bumblebee/kit/enumgen/__examples__.Scheme"
+	return "github.com/machinefi/Bumblebee/kit/enumgen/__examples__.Scheme"
 }
 
 func (v Scheme) ConstValues() []enum.IntStringerEnum {

@@ -8,7 +8,7 @@ import (
 	"database/sql/driver"
 	"errors"
 
-	"github.com/iotexproject/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/enum"
 )
 
 var InvalidTaskState = errors.New("invalid TaskState type")
@@ -70,7 +70,7 @@ func (v TaskState) Label() string {
 }
 
 func (v TaskState) TypeName() string {
-	return "github.com/iotexproject/Bumblebee/kit/mq.TaskState"
+	return "github.com/machinefi/Bumblebee/kit/mq.TaskState"
 }
 
 func (v TaskState) ConstValues() []enum.IntStringerEnum {

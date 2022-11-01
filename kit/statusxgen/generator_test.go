@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/iotexproject/Bumblebee/kit/statusxgen"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/kit/statusxgen"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 func TestGenerator(t *testing.T) {

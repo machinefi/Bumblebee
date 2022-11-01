@@ -5,7 +5,7 @@ import (
 	"encoding"
 	"fmt"
 
-	"github.com/iotexproject/Bumblebee/testutil/typesxtestutil/typ/typ"
+	"github.com/machinefi/Bumblebee/testutil/typesxtestutil/typ/typ"
 )
 
 type String string

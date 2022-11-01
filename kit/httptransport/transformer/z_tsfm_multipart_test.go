@@ -13,10 +13,10 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	. "github.com/iotexproject/Bumblebee/kit/httptransport/transformer"
-	"github.com/iotexproject/Bumblebee/x/ptrx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	. "github.com/machinefi/Bumblebee/kit/httptransport/transformer"
+	"github.com/machinefi/Bumblebee/x/ptrx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 func TestMultipart(t *testing.T) {

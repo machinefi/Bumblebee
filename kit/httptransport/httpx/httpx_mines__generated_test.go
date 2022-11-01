@@ -6,7 +6,7 @@ package httpx_test
 import (
 	"fmt"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
 )
 
 func ExampleApplicationOgg() {

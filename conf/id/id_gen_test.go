@@ -5,7 +5,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/conf/id"
+	"github.com/machinefi/Bumblebee/conf/id"
 )
 
 func TestFromIP(t *testing.T) {

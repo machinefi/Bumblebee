@@ -6,8 +6,8 @@ package example
 import (
 	"fmt"
 
-	"github.com/iotexproject/Bumblebee/kit/sqlx"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/kit/sqlx"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
 )
 
 var OrgTable *builder.Table

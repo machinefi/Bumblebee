@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport"
-	. "github.com/iotexproject/Bumblebee/kit/httptransport/client/roundtrippers"
+	"github.com/machinefi/Bumblebee/kit/httptransport"
+	. "github.com/machinefi/Bumblebee/kit/httptransport/client/roundtrippers"
 )
 
 func TestLogRoundTripper(t *testing.T) {

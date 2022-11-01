@@ -11,15 +11,15 @@ import (
 	"github.com/google/uuid"
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/testutil/postgrestestutil"
+	"github.com/machinefi/Bumblebee/testutil/postgrestestutil"
 
-	"github.com/iotexproject/Bumblebee/base/types"
-	"github.com/iotexproject/Bumblebee/conf/log"
-	"github.com/iotexproject/Bumblebee/kit/metax"
-	"github.com/iotexproject/Bumblebee/kit/sqlx"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/driver/postgres"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/migration"
+	"github.com/machinefi/Bumblebee/base/types"
+	"github.com/machinefi/Bumblebee/conf/log"
+	"github.com/machinefi/Bumblebee/kit/metax"
+	"github.com/machinefi/Bumblebee/kit/sqlx"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/kit/sqlx/driver/postgres"
+	"github.com/machinefi/Bumblebee/kit/sqlx/migration"
 )
 
 var connectors map[string]driver.Connector

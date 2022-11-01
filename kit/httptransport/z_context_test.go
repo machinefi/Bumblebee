@@ -7,9 +7,9 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/base/consts"
+	"github.com/machinefi/Bumblebee/base/consts"
 
-	. "github.com/iotexproject/Bumblebee/kit/httptransport"
+	. "github.com/machinefi/Bumblebee/kit/httptransport"
 )
 
 func TestServiceMeta(t *testing.T) {

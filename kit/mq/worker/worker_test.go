@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/iotexproject/Bumblebee/kit/mq/worker"
+	"github.com/machinefi/Bumblebee/kit/mq/worker"
 )
 
 func TestWorker(t *testing.T) {

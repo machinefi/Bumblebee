@@ -3,10 +3,10 @@ package postgrestestutil
 import (
 	"net/url"
 
-	"github.com/iotexproject/Bumblebee/conf/app"
-	"github.com/iotexproject/Bumblebee/conf/log"
-	"github.com/iotexproject/Bumblebee/conf/postgres"
-	"github.com/iotexproject/Bumblebee/kit/sqlx"
+	"github.com/machinefi/Bumblebee/conf/app"
+	"github.com/machinefi/Bumblebee/conf/log"
+	"github.com/machinefi/Bumblebee/conf/postgres"
+	"github.com/machinefi/Bumblebee/kit/sqlx"
 )
 
 type TestEndpoint struct{ postgres.Endpoint }

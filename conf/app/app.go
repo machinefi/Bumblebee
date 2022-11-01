@@ -7,8 +7,8 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/iotexproject/Bumblebee/conf/deploy"
-	"github.com/iotexproject/Bumblebee/conf/log"
+	"github.com/machinefi/Bumblebee/conf/deploy"
+	"github.com/machinefi/Bumblebee/conf/log"
 )
 
 type OptSetter = func(conf *Ctx)

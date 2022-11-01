@@ -5,8 +5,8 @@ import (
 	"context"
 	"io/ioutil"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/kit/kit"
 )
 
 var raw = bytes.NewBuffer(nil)

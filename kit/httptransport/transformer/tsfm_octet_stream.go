@@ -7,8 +7,8 @@ import (
 	"net/textproto"
 	"reflect"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 func init() { DefaultFactory.Register(&OctetStream{}) }

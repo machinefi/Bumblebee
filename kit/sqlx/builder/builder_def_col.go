@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 type Column struct {

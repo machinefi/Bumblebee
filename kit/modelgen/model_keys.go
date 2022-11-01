@@ -1,6 +1,6 @@
 package modelgen
 
-import "github.com/iotexproject/Bumblebee/kit/sqlx/builder"
+import "github.com/machinefi/Bumblebee/kit/sqlx/builder"
 
 type Keys struct {
 	Primary       []string

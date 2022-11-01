@@ -7,8 +7,8 @@ import (
 
 	"github.com/saitofun/qlib/util/qnaming"
 
-	"github.com/iotexproject/Bumblebee/gen/codegen"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/gen/codegen"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 type Generator struct {

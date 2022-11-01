@@ -6,7 +6,7 @@ import (
 	"path"
 	"path/filepath"
 
-	. "github.com/iotexproject/Bumblebee/gen/codegen"
+	. "github.com/machinefi/Bumblebee/gen/codegen"
 )
 
 func CreateDemoFile(filename string) *File {

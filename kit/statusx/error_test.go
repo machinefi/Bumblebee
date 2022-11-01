@@ -9,10 +9,10 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/kit/statusx"
-	"github.com/iotexproject/Bumblebee/kit/statusxgen"
-	. "github.com/iotexproject/Bumblebee/kit/statusxgen/__examples__"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/kit/statusx"
+	"github.com/machinefi/Bumblebee/kit/statusxgen"
+	. "github.com/machinefi/Bumblebee/kit/statusxgen/__examples__"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 func init() {

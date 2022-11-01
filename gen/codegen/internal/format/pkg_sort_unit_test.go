@@ -7,7 +7,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/iotexproject/Bumblebee/gen/codegen/internal/format"
+	"github.com/machinefi/Bumblebee/gen/codegen/internal/format"
 )
 
 func TestStdLibSet_Read(t *testing.T) {

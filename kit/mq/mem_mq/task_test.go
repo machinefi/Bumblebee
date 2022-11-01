@@ -7,9 +7,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/iotexproject/Bumblebee/kit/mq"
-	"github.com/iotexproject/Bumblebee/kit/mq/mem_mq"
-	"github.com/iotexproject/Bumblebee/kit/mq/worker"
+	"github.com/machinefi/Bumblebee/kit/mq"
+	"github.com/machinefi/Bumblebee/kit/mq/mem_mq"
+	"github.com/machinefi/Bumblebee/kit/mq/worker"
 )
 
 var (

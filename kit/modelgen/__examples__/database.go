@@ -1,5 +1,5 @@
 package example
 
-import "github.com/iotexproject/Bumblebee/kit/sqlx"
+import "github.com/machinefi/Bumblebee/kit/sqlx"
 
 var DB = sqlx.NewDatabase("test")

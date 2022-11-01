@@ -8,9 +8,9 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/iotexproject/Bumblebee/kit/httptransport/httpx"
-	vldterr "github.com/iotexproject/Bumblebee/kit/validator/errors"
-	"github.com/iotexproject/Bumblebee/x/typesx"
+	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
+	vldterr "github.com/machinefi/Bumblebee/kit/validator/errors"
+	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
 func init() { DefaultFactory.Register(&JSON{}) }

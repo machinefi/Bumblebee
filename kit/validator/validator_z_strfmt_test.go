@@ -6,8 +6,8 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/kit/validator"
-	. "github.com/iotexproject/Bumblebee/kit/validator/strfmt"
+	. "github.com/machinefi/Bumblebee/kit/validator"
+	. "github.com/machinefi/Bumblebee/kit/validator/strfmt"
 )
 
 func ExampleNewRegexpStrfmtValidator() {

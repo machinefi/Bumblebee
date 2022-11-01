@@ -8,8 +8,8 @@ import (
 	"net/textproto"
 	"net/url"
 
-	"github.com/iotexproject/Bumblebee/kit/kit"
-	"github.com/iotexproject/Bumblebee/kit/statusx"
+	"github.com/machinefi/Bumblebee/kit/kit"
+	"github.com/machinefi/Bumblebee/kit/statusx"
 )
 
 type Encode func(context.Context, io.Writer, interface{}) error

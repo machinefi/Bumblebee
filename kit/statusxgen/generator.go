@@ -9,10 +9,10 @@ import (
 
 	"github.com/saitofun/qlib/util/qnaming"
 
-	gen "github.com/iotexproject/Bumblebee/gen/codegen"
-	"github.com/iotexproject/Bumblebee/kit/statusx"
-	"github.com/iotexproject/Bumblebee/x/misc/must"
-	"github.com/iotexproject/Bumblebee/x/pkgx"
+	gen "github.com/machinefi/Bumblebee/gen/codegen"
+	"github.com/machinefi/Bumblebee/kit/statusx"
+	"github.com/machinefi/Bumblebee/x/misc/must"
+	"github.com/machinefi/Bumblebee/x/pkgx"
 )
 
 func New(pkg *pkgx.Pkg) *Generator {

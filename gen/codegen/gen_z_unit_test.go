@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	. "github.com/iotexproject/Bumblebee/gen/codegen"
+	. "github.com/machinefi/Bumblebee/gen/codegen"
 )
 
 func CreateDemoFile() *File {

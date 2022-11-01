@@ -8,8 +8,8 @@ import (
 	. "github.com/onsi/gomega"
 	"github.com/saitofun/qlib/container/qptr"
 
-	"github.com/iotexproject/Bumblebee/base/types"
-	. "github.com/iotexproject/Bumblebee/conf/env"
+	"github.com/machinefi/Bumblebee/base/types"
+	. "github.com/machinefi/Bumblebee/conf/env"
 )
 
 func TestPathWalker(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	. "github.com/iotexproject/Bumblebee/x/reflectx"
+	. "github.com/machinefi/Bumblebee/x/reflectx"
 )
 
 type Foo struct {

@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/iotexproject/Bumblebee/kit/sqlx/builder"
-	"github.com/iotexproject/Bumblebee/kit/sqlx/scanner"
+	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	"github.com/machinefi/Bumblebee/kit/sqlx/scanner"
 )
 
 func InsertToDB(db DBExecutor, m builder.Model, zeros []string, additions ...builder.Addition) builder.SqlExpr {

@@ -8,7 +8,7 @@ import (
 	"database/sql/driver"
 	"errors"
 
-	"github.com/iotexproject/Bumblebee/kit/enum"
+	"github.com/machinefi/Bumblebee/kit/enum"
 )
 
 var InvalidLoggerFormatType = errors.New("invalid LoggerFormatType type")
@@ -70,7 +70,7 @@ func (v LoggerFormatType) Label() string {
 }
 
 func (v LoggerFormatType) TypeName() string {
-	return "github.com/iotexproject/Bumblebee/conf/log.LoggerFormatType"
+	return "github.com/machinefi/Bumblebee/conf/log.LoggerFormatType"
 }
 
 func (v LoggerFormatType) ConstValues() []enum.IntStringerEnum {

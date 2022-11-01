@@ -1,4 +1,4 @@
-module github.com/iotexproject/Bumblebee
+module github.com/machinefi/Bumblebee
 
 go 1.18
 
