@@ -1,12 +1,10 @@
 package cmd
 
-import (
-	"github.com/spf13/cobra"
-)
+import "github.com/spf13/cobra"
 
 var Patch = &cobra.Command{
 	Use:   "patch",
-	Short: "patch",
+	Short: "patch code to go root",
 }
 
 func init() {

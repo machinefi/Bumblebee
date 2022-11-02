@@ -167,9 +167,9 @@ func (t *RequestTsfm) DecodeFromRequestInfo(ctx context.Context, ri httpx.Reques
 	if with, ok := v.(httpx.WithFromRequestInfo); ok {
 		if err := with.FromRequestInfo(ri); err != nil {
 			if est := err.(interface {
-				ToErrorFields() statusx.ErrorFields
+				ToFieldErrors() statusx.ErrorFields
 			}); ok {
-				if errorFields := est.ToErrorFields(); len(errorFields) > 0 {
+				if errorFields := est.ToFieldErrors(); len(errorFields) > 0 {
 					return (&badRequest{errorFields: errorFields}).Err()
 				}
 			}
@@ -255,9 +255,9 @@ func (t *RequestTsfm) validate(v interface{}) error {
 	if self, ok := v.(validator.CanValidate); ok {
 		if err := self.Validate(); err != nil {
 			if est := err.(interface {
-				ToErrorFields() statusx.ErrorFields
+				ToFieldErrors() statusx.ErrorFields
 			}); ok {
-				if errorFields := est.ToErrorFields(); len(errorFields) > 0 {
+				if errorFields := est.ToFieldErrors(); len(errorFields) > 0 {
 					return (&badRequest{errorFields: errorFields}).Err()
 				}
 			}

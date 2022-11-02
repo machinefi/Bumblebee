@@ -8,7 +8,6 @@ import (
 	"github.com/DATA-DOG/go-sqlmock"
 
 	"github.com/machinefi/Bumblebee/kit/sqlx/scanner"
-
 	"github.com/machinefi/Bumblebee/kit/sqlx/scanner/nullable"
 )
 

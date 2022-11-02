@@ -8,7 +8,6 @@ import (
 	"github.com/fatih/color"
 
 	"github.com/machinefi/Bumblebee/base/consts"
-
 	. "github.com/machinefi/Bumblebee/kit/httptransport"
 	"github.com/machinefi/Bumblebee/testutil/httptransporttestutil/server/cmd/app/routes"
 )

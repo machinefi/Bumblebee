@@ -7,12 +7,12 @@ import (
 	"path/filepath"
 	"sort"
 
-	"github.com/saitofun/qlib/util/qnaming"
 	"golang.org/x/tools/go/packages"
 
 	"github.com/machinefi/Bumblebee/gen/codegen"
 	"github.com/machinefi/Bumblebee/x/misc/must"
 	"github.com/machinefi/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/x/stringsx"
 )
 
 type Generator struct {
@@ -52,7 +52,7 @@ func (g Generator) Output(cwd string) {
 			must.String(pkgx.PkgPathByPath(tn.Pkg().Path(), packages.NeedName, packages.NeedFiles)),
 		)
 		filename := codegen.GenerateFileSuffix(
-			path.Join(dir, qnaming.LowerSnakeCase(enum.Name)+".go"))
+			path.Join(dir, stringsx.LowerSnakeCase(enum.Name)+".go"))
 		f := codegen.NewFile(tn.Pkg().Name(), filename)
 		enum.WriteToFile(f)
 

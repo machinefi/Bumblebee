@@ -1,13 +1,9 @@
 // This is a generated source file. DO NOT EDIT
-// Version: 0.0.1
 // Source: errors/status_error__generated.go
-// Date: Aug  2 00:39:02
 
 package errors
 
-import (
-	"github.com/machinefi/Bumblebee/kit/statusx"
-)
+import "github.com/machinefi/Bumblebee/kit/statusx"
 
 var _ statusx.Error = (*StatusError)(nil)
 

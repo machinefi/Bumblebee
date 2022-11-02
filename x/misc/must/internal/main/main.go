@@ -6,9 +6,8 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/saitofun/qlib/util/qnaming"
-
 	. "github.com/machinefi/Bumblebee/gen/codegen"
+	"github.com/machinefi/Bumblebee/x/stringsx"
 )
 
 func main() {
@@ -62,9 +61,9 @@ func main() {
 		for _, t := range types {
 			name := ""
 			if t.Name != "" {
-				name += qnaming.UpperCamelCase(t.Name)
+				name += stringsx.UpperCamelCase(t.Name)
 			} else {
-				name += qnaming.UpperCamelCase(string(t.BuiltInType))
+				name += stringsx.UpperCamelCase(string(t.BuiltInType))
 			}
 			file.WriteSnippet(
 				Func(Var(t.BuiltInType, "v"), Var(Error, "err")).

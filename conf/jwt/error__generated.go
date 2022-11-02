@@ -3,9 +3,7 @@
 
 package jwt
 
-import (
-	"github.com/machinefi/Bumblebee/kit/statusx"
-)
+import "github.com/machinefi/Bumblebee/kit/statusx"
 
 var _ statusx.Error = (*Error)(nil)
 

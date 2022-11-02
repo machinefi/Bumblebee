@@ -5,10 +5,9 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/saitofun/qlib/util/qnaming"
-
 	"github.com/machinefi/Bumblebee/gen/codegen"
 	"github.com/machinefi/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/x/stringsx"
 )
 
 type Generator struct {
@@ -34,7 +33,7 @@ func (g *Generator) Output(cwd string) {
 		return
 	}
 	dir, _ := filepath.Rel(cwd, filepath.Dir(g.pkg.GoFiles[0]))
-	filename := codegen.GenerateFileSuffix(path.Join(dir, qnaming.LowerSnakeCase(g.StructName)+".go"))
+	filename := codegen.GenerateFileSuffix(path.Join(dir, stringsx.LowerSnakeCase(g.StructName)+".go"))
 	f := codegen.NewFile(g.pkg.Name, filename)
 	g.mod.WriteTo(f)
 	_, _ = f.Write()
@@ -77,6 +76,6 @@ func (g *Config) SetDefault() {
 	}
 
 	if g.TableName == "" {
-		g.TableName = "t_" + qnaming.LowerSnakeCase(g.StructName)
+		g.TableName = "t_" + stringsx.LowerSnakeCase(g.StructName)
 	}
 }

@@ -8,7 +8,6 @@ import (
 	. "github.com/onsi/gomega"
 
 	"github.com/machinefi/Bumblebee/base/consts"
-
 	. "github.com/machinefi/Bumblebee/kit/httptransport"
 )
 

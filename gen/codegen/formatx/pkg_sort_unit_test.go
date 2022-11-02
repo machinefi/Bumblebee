@@ -1,4 +1,4 @@
-package format_test
+package formatx_test
 
 import (
 	"path"
@@ -7,11 +7,11 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"github.com/machinefi/Bumblebee/gen/codegen/internal/format"
+	"github.com/machinefi/Bumblebee/gen/codegen/formatx"
 )
 
 func TestStdLibSet_Read(t *testing.T) {
-	s := make(format.StdLibSet)
+	s := make(formatx.StdLibSet)
 	s.WalkInit(path.Join(runtime.GOROOT(), "src"), "")
 
 	NewWithT(t).Expect(s["json"]).To(BeFalse())

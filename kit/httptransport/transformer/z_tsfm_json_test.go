@@ -11,7 +11,6 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/machinefi/Bumblebee/kit/httptransport/httpx"
-
 	. "github.com/machinefi/Bumblebee/kit/httptransport/transformer"
 	vldterr "github.com/machinefi/Bumblebee/kit/validator/errors"
 	"github.com/machinefi/Bumblebee/x/typesx"

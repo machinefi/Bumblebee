@@ -9,10 +9,9 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/saitofun/qlib/encoding/qtext"
-
 	"github.com/machinefi/Bumblebee/base/types"
 	"github.com/machinefi/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/textx"
 )
 
 type Decoder struct {
@@ -161,7 +160,7 @@ func (d *Decoder) scan(rv reflect.Value) error {
 			if v, ok := fv.Addr().Interface().(types.TextUnmarshaler); ok {
 				err = v.UnmarshalText(text)
 			} else {
-				err = qtext.UnmarshalText(fv, text)
+				err = textx.UnmarshalText(fv, text)
 			}
 			if err != nil {
 				return err

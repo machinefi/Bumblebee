@@ -6,12 +6,11 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/saitofun/qlib/encoding/qtext"
-
 	"github.com/machinefi/Bumblebee/kit/validator/errors"
 	"github.com/machinefi/Bumblebee/kit/validator/rules"
 	"github.com/machinefi/Bumblebee/x/contextx"
 	"github.com/machinefi/Bumblebee/x/reflectx"
+	"github.com/machinefi/Bumblebee/x/textx"
 	"github.com/machinefi/Bumblebee/x/typesx"
 )
 
@@ -224,7 +223,7 @@ func (l *Loader) New(ctx context.Context, rule *Rule) (Validator, error) {
 
 		if ret.DftValue != nil {
 			if rv, ok := typesx.TryNew(typ); ok {
-				if err := qtext.UnmarshalText(rv, ret.DftValue); err != nil {
+				if err := textx.UnmarshalText(rv, ret.DftValue); err != nil {
 					return nil, fmt.Errorf(
 						"default value `%s` can not unmarshal to %s: %s",
 						ret.DftValue, typ, err,
@@ -266,7 +265,7 @@ func (l *Loader) validate(v interface{}) error {
 		}
 
 		if l.DftValue != nil && rv.CanSet() {
-			if err := qtext.UnmarshalText(rv, l.DftValue); err != nil {
+			if err := textx.UnmarshalText(rv, l.DftValue); err != nil {
 				return fmt.Errorf("unmarshal default value failed")
 			}
 		}

@@ -9,13 +9,12 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/saitofun/qlib/util/qnaming"
-
 	g "github.com/machinefi/Bumblebee/gen/codegen"
 	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
 	"github.com/machinefi/Bumblebee/x/mapx"
 	"github.com/machinefi/Bumblebee/x/misc/must"
 	"github.com/machinefi/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/x/stringsx"
 )
 
 func NewModel(pkg *pkgx.Pkg, tn *types.TypeName, doc string, cfg *Config) *Model {
@@ -332,7 +331,7 @@ func (m *Model) SnippetUniqueIndexes(f *g.File) []g.Snippet {
 			Do(g.Return(f.Value(m.Keys.UniqueIndexes))),
 	)
 	for _, name := range names {
-		fn := "UniqueIndex" + qnaming.UpperCamelCase(name)
+		fn := "UniqueIndex" + stringsx.UpperCamelCase(name)
 		snippets = append(snippets,
 			g.Func().Named(fn).MethodOf(g.Var(m.PtrType())).
 				Return(g.Var(g.String)).

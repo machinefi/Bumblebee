@@ -1,6 +1,8 @@
 package supervisor
 
 import (
+	"syscall"
+
 	"github.com/machinefi/Bumblebee/base/cmd"
 	"github.com/machinefi/Bumblebee/base/types"
 	"github.com/machinefi/Bumblebee/conf/section_config"
@@ -60,7 +62,7 @@ func (c *Program) SetDefault() {
 		c.ExitCodes = types.CommaSplitInts{0}
 	}
 	if c.StopSignal == 0 {
-		c.StopSignal = types.SIGTERM
+		c.StopSignal = types.Signal(syscall.SIGTERM)
 	}
 }
 

@@ -7,12 +7,11 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/saitofun/qlib/util/qnaming"
-
 	gen "github.com/machinefi/Bumblebee/gen/codegen"
 	"github.com/machinefi/Bumblebee/kit/statusx"
 	"github.com/machinefi/Bumblebee/x/misc/must"
 	"github.com/machinefi/Bumblebee/x/pkgx"
+	"github.com/machinefi/Bumblebee/x/stringsx"
 )
 
 func New(pkg *pkgx.Pkg) *Generator {
@@ -45,7 +44,7 @@ func (g *Generator) Output(cwd string) {
 			cwd,
 			must.String(pkgx.PkgPathByPath(e.TypeName.Pkg().Path())),
 		)
-		filename := gen.GenerateFileSuffix(path.Join(dir, qnaming.LowerSnakeCase(e.Name())+".go"))
+		filename := gen.GenerateFileSuffix(path.Join(dir, stringsx.LowerSnakeCase(e.Name())+".go"))
 
 		f := gen.NewFile(e.TypeName.Pkg().Name(), filename)
 

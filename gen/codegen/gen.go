@@ -9,10 +9,10 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/saitofun/qlib/util/qnaming"
 	"golang.org/x/tools/go/packages"
 
-	"github.com/machinefi/Bumblebee/gen/codegen/internal/format"
+	"github.com/machinefi/Bumblebee/gen/codegen/formatx"
+	"github.com/machinefi/Bumblebee/x/stringsx"
 )
 
 type File struct {
@@ -52,7 +52,7 @@ func (f *File) bytes() []byte {
 		buf.WriteRune('\n')
 	}
 
-	buf.Write([]byte("\npackage " + qnaming.LowerSnakeCase(f.Pkg) + "\n"))
+	buf.Write([]byte("\npackage " + stringsx.LowerSnakeCase(f.Pkg) + "\n"))
 
 	if len(f.Imps) > 0 {
 		if len(f.Imps) == 1 {
@@ -83,7 +83,7 @@ func (f *File) bytes() []byte {
 	buf.Write(f.Buffer.Bytes())
 
 	if f.opts.MustFormat {
-		return format.MustFormat(f.Name, buf.Bytes(), format.SortImports)
+		return formatx.MustFormat(f.Name, "", buf.Bytes(), formatx.SortImports)
 	}
 	return buf.Bytes()
 }
@@ -118,7 +118,7 @@ func (f *File) _import(pkg string) string {
 		if len(f.Pkgs[min]) == 0 {
 			f.Imps[pkg] = min
 		} else {
-			f.Imps[pkg] = qnaming.LowerSnakeCase(
+			f.Imps[pkg] = stringsx.LowerSnakeCase(
 				fmt.Sprintf("gen %s %d", min, len(f.Pkgs[min])),
 			)
 		}

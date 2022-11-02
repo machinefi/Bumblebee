@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/saitofun/qlib/util/qnaming"
+	"github.com/machinefi/Bumblebee/x/stringsx"
 )
 
 type (
@@ -146,19 +146,19 @@ func (s SnippetIdent) Bytes() []byte { return []byte(s) }
 func (s SnippetIdent) _canAddr() {}
 
 func (s SnippetIdent) UpperCamelCase() *SnippetIdent {
-	return Ident(qnaming.UpperCamelCase(string(s)))
+	return Ident(stringsx.UpperCamelCase(string(s)))
 }
 
 func (s SnippetIdent) LowerCamelCase() *SnippetIdent {
-	return Ident(qnaming.LowerCamelCase(string(s)))
+	return Ident(stringsx.LowerCamelCase(string(s)))
 }
 
 func (s SnippetIdent) UpperSnakeCase() *SnippetIdent {
-	return Ident(qnaming.UpperSnakeCase(string(s)))
+	return Ident(stringsx.UpperSnakeCase(string(s)))
 }
 
 func (s SnippetIdent) LowerSnakeCase() *SnippetIdent {
-	return Ident(qnaming.LowerSnakeCase(string(s)))
+	return Ident(stringsx.LowerSnakeCase(string(s)))
 }
 
 // SnippetComments comment code

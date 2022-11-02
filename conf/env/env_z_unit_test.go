@@ -6,10 +6,10 @@ import (
 	"time"
 
 	. "github.com/onsi/gomega"
-	"github.com/saitofun/qlib/container/qptr"
 
 	"github.com/machinefi/Bumblebee/base/types"
 	. "github.com/machinefi/Bumblebee/conf/env"
+	"github.com/machinefi/Bumblebee/x/ptrx"
 )
 
 func TestPathWalker(t *testing.T) {
@@ -69,7 +69,7 @@ func TestEnvVars(t *testing.T) {
 	c.Duration = types.Duration(time.Hour + 2*time.Second + 3*time.Microsecond)
 	c.Password = types.Password("123123")
 	c.Key = "123456"
-	c.PtrString = qptr.String("123456=")
+	c.PtrString = ptrx.String("123456=")
 	c.Slice = []string{"1", "2"}
 	c.Config.Key = "key"
 	c.Config.defaultValue = true

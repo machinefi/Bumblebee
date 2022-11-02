@@ -8,11 +8,12 @@ import (
 	"testing"
 	"time"
 
+	. "github.com/onsi/gomega"
+
 	"github.com/machinefi/Bumblebee/kit/kit"
 	"github.com/machinefi/Bumblebee/kit/metax"
 	"github.com/machinefi/Bumblebee/kit/mq"
 	"github.com/machinefi/Bumblebee/kit/mq/mem_mq"
-	. "github.com/onsi/gomega"
 )
 
 func NewTask(subject, id string, arg ...interface{}) *Task {

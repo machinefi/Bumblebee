@@ -6,12 +6,13 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/pkg/errors"
+
 	"github.com/machinefi/Bumblebee/kit/kit"
 	"github.com/machinefi/Bumblebee/kit/metax"
 	"github.com/machinefi/Bumblebee/kit/mq/worker"
 	"github.com/machinefi/Bumblebee/x/contextx"
 	"github.com/machinefi/Bumblebee/x/mapx"
-	"github.com/pkg/errors"
 )
 
 type TaskWorkerOption func(*taskWorkerOption)

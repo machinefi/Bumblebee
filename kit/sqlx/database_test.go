@@ -11,8 +11,6 @@ import (
 	"github.com/google/uuid"
 	. "github.com/onsi/gomega"
 
-	"github.com/machinefi/Bumblebee/testutil/postgrestestutil"
-
 	"github.com/machinefi/Bumblebee/base/types"
 	"github.com/machinefi/Bumblebee/conf/log"
 	"github.com/machinefi/Bumblebee/kit/metax"
@@ -20,6 +18,7 @@ import (
 	"github.com/machinefi/Bumblebee/kit/sqlx/builder"
 	"github.com/machinefi/Bumblebee/kit/sqlx/driver/postgres"
 	"github.com/machinefi/Bumblebee/kit/sqlx/migration"
+	"github.com/machinefi/Bumblebee/testutil/postgrestestutil"
 )
 
 var connectors map[string]driver.Connector

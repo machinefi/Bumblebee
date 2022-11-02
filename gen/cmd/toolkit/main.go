@@ -16,9 +16,10 @@ var command = &cobra.Command{
 func init() {
 	verbose := false
 	command.PersistentFlags().BoolVarP(&verbose, "verbose", "v", verbose, "")
-	command.AddCommand(cmd.Cmd)
-	command.AddCommand(cmd.Patch)
 
+	command.AddCommand(cmd.Gen)
+	command.AddCommand(cmd.Patch)
+	command.AddCommand(cmd.Format)
 }
 
 func main() {

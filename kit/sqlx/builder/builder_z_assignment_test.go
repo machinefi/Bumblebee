@@ -6,9 +6,8 @@ import (
 
 	g "github.com/onsi/gomega"
 
-	. "github.com/machinefi/Bumblebee/testutil/buildertestutil"
-
 	. "github.com/machinefi/Bumblebee/kit/sqlx/builder"
+	. "github.com/machinefi/Bumblebee/testutil/buildertestutil"
 )
 
 func TestAssignment(t *testing.T) {
